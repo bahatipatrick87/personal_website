@@ -1,0 +1,22 @@
+# Runs on every push and PR. Full production build still needs Clerk env vars
+# (see README) — use Vercel or `npm run build` locally with `.env.local`.
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
