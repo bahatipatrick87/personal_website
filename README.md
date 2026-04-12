@@ -46,6 +46,8 @@ On GitHub, **Actions** runs `lint` and `typecheck` on pushes and pull requests t
 2. Set the same environment variables in the Vercel project settings (no need to commit `.env.local`).
 3. Add your production URL in the [Clerk Dashboard](https://dashboard.clerk.com) under **Domains** / allowed origins and redirect URLs.
 
+**If you see Internal Server Error on Vercel**, follow **[VERCEL.md](./VERCEL.md)** (env vars, Clerk URLs, root directory, redeploy).
+
 ## Project layout
 
 - `src/app/(public)/` — Public marketing pages

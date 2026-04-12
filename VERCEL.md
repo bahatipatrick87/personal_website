@@ -1,0 +1,67 @@
+# Deploy on Vercel (safe setup)
+
+An **Internal Server Error** on Vercel is almost always missing or wrong **environment variables**, or **Clerk** not allowing your Vercel URL.
+
+## 1. Correct project root
+
+- If your GitHub repo **only** contains this Next.js app (you see `package.json` and `src/` at the repo root), leave **Root Directory** empty in Vercel.
+- If the app lives in a subfolder (e.g. `my-website/`), set **Root Directory** to that folder in  
+  **Project → Settings → General → Root Directory**.
+
+## 2. Required environment variables
+
+In **Project → Settings → Environment Variables**, add these for **Production** (and **Preview** if you use preview deployments).
+
+| Name | Value | Notes |
+|------|--------|--------|
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | From [Clerk Dashboard](https://dashboard.clerk.com) → API Keys | Starts with `pk_` |
+| `CLERK_SECRET_KEY` | Same place | Starts with `sk_`. **Server only** — never expose in client code. |
+| `NEXT_PUBLIC_SITE_URL` | `https://your-project.vercel.app` or your custom domain | **Include `https://`**, no trailing slash. Example: `https://bahati-portfolio.vercel.app` |
+
+Optional:
+
+| Name | Value |
+|------|--------|
+| `DASHBOARD_ALLOWED_USER_IDS` | Your Clerk user id(s), comma-separated |
+
+**Important**
+
+- Add variables for **Production** and **Preview** (and **Development** if you use Vercel CLI).
+- After changing env vars, trigger a **new deployment** (Redeploy) so the build and runtime pick them up.
+
+## 3. Clerk: allow your Vercel URL
+
+Without this, sign-in can break and you can see errors.
+
+1. Open [Clerk Dashboard](https://dashboard.clerk.com) → your application.
+2. Go to **Configure → Paths** (or **Domains / URLs**, depending on Clerk UI version).
+3. Add:
+   - **Production**: `https://your-domain.com` (or your `*.vercel.app` URL).
+4. Go to **Configure → Sessions** / **Allowed origins** (or **Frontend API**):
+   - Allow your Vercel URL (e.g. `https://xxx.vercel.app`).
+
+If you use **separate Clerk “Development” and “Production”** instances, use **production** keys in Vercel Production env vars.
+
+## 4. Deploy
+
+1. Push to GitHub (Vercel auto-builds), or **Deployments → Redeploy** after fixing env.
+2. Open **Deployments → [latest] → Build Logs** if the build fails.
+3. If the build succeeds but the site shows **500**, open **Deployments → [latest] → Functions** (or **Runtime Logs**) and look for the stack trace (often “Clerk” or “secret key”).
+
+## 5. Quick checklist
+
+- [ ] `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` are set on Vercel (not only in `.env.local` on your laptop).
+- [ ] `NEXT_PUBLIC_SITE_URL` matches how users open the site (`https://...`).
+- [ ] Clerk allows that same URL for redirects / allowed origins.
+- [ ] Root Directory matches where `package.json` lives in the repo.
+- [ ] Redeploy after any env change.
+
+## 6. Local production check (optional)
+
+```bash
+cp .env.example .env.local
+# fill in real keys and NEXT_PUBLIC_SITE_URL=http://localhost:3000
+npm run build && npm run start
+```
+
+Visit `http://localhost:3000`. If that works but Vercel fails, the problem is almost certainly Vercel env vars or Clerk domain settings.

@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { AppProviders } from "@/components/app-providers";
-import { getSiteUrl } from "@/lib/site";
+import { getMetadataBase } from "@/lib/site";
 import { SocialFooter } from "@/components/social-footer";
 
 const geistSans = Geist({
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: getMetadataBase(),
   title: {
     default: "Bahati Patrick | Data Scientist & Business Coach",
     template: "%s | Bahati Patrick",
