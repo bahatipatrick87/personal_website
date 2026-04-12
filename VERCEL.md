@@ -2,6 +2,28 @@
 
 An **Internal Server Error** on Vercel is almost always missing or wrong **environment variables**, or **Clerk** not allowing your Vercel URL.
 
+## Preview URL looks like `…-git-main-….vercel.app` → 500
+
+That is a **Preview** deployment (every git branch gets its own URL), **not** your Production domain.
+
+**Cause 1 — Env vars only on Production (most common)**  
+In Vercel, each variable has checkboxes: **Production**, **Preview**, **Development**.  
+If you only ticked **Production**, Preview builds run **without** `CLERK_SECRET_KEY` / `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` → Clerk throws → **Internal Server Error**.
+
+**Fix:** **Settings → Environment Variables** → open each of `CLERK_SECRET_KEY`, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, and (optional) `NEXT_PUBLIC_SITE_URL`, `DASHBOARD_ALLOWED_USER_IDS` → enable **Preview** (and Production). Save → **Redeploy** that preview.
+
+**Cause 2 — Clerk does not allow this host**  
+Clerk must allow your app’s origin.
+
+**Fix:** [Clerk Dashboard](https://dashboard.clerk.com) → your app → **Configure** → **Domains** (or **Paths / Authorized redirect URLs**, depending on UI) → add:
+
+- Your **production** URL, and  
+- Either your exact preview host, or a pattern Clerk supports for Vercel (see [Clerk + Vercel](https://clerk.com/docs/guides/development/deployment/vercel) and their **preview environment** guide).
+
+Using **Development** API keys for Vercel **Preview** and **Production** keys only for **Production** is recommended in [Clerk’s Vercel docs](https://clerk.com/docs/guides/development/deployment/vercel).
+
+**Quick test:** Open your **Production** deployment URL in Vercel (the one without `git-main` in the name). If Production works but Preview does not, it is almost always **Preview env vars** or **Clerk domain** settings.
+
 ## 1. Correct project root
 
 - If your GitHub repo **only** contains this Next.js app (you see `package.json` and `src/` at the repo root), leave **Root Directory** empty in Vercel.
