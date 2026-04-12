@@ -24,7 +24,7 @@ export function DashboardNav() {
             key={item.href}
             href={item.href}
             data-active={active}
-            className="flex shrink-0 items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors data-[active=true]:bg-[color:var(--accent)] data-[active=true]:text-white data-[active=false]:text-[color:var(--text-secondary)] data-[active=false]:hover:bg-[color:var(--accent-soft)] data-[active=false]:hover:text-[color:var(--text-main)]"
+            className="flex shrink-0 items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors data-[active=true]:bg-[color:var(--text-main)] data-[active=true]:text-[color:var(--bg-surface)] data-[active=false]:text-[color:var(--text-secondary)] data-[active=false]:hover:bg-[color:var(--accent-soft)] data-[active=false]:hover:text-[color:var(--text-main)]"
           >
             <span className="opacity-90" aria-hidden>
               {item.icon}

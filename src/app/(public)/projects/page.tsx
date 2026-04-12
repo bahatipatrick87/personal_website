@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       name: "Real-Time Credit Card Fraud Detection System",
       tech: "Apache Spark (PySpark), Kafka, Hadoop (HDFS), Python, Docker, Streamlit, Plotly",
       tag: "Big Data & ML",
-      tagColor: "#6366f1",
+      tagColor: "#404040",
       highlights: [
         "Architected a production-style Lambda Architecture pipeline processing over 280,000 credit card transactions for both real-time monitoring and historical analytics.",
         "Implemented a streaming layer with Spark Structured Streaming and Kafka achieving sub‑2‑second latency for fraud alerts and risk scores.",
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
       name: "Eventligo Platform",
       tech: "Web Application, React, Node.js, Data Integration",
       tag: "Full-Stack Web",
-      tagColor: "#8b5cf6",
+      tagColor: "#525252",
       highlights: [
         "Co-designed and implemented a web platform that allows users to discover, create, and manage events in a unified interface.",
         "Built backend and data-handling components to support user registration, event workflows, and analytics-ready logging."
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
       name: "Real-Time Monitoring Dashboard",
       tech: "Python, Power BI, SQL",
       tag: "Analytics",
-      tagColor: "#06b6d4",
+      tagColor: "#737373",
       highlights: [
         "Developed an interactive monitoring dashboard that aggregates live operational data into intuitive KPIs and visualizations for decision-makers.",
       ]
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
       name: "Image Processing Manipulation Tool",
       tech: "Python, NumPy, OpenCV, Matplotlib",
       tag: "Computer Vision",
-      tagColor: "#ec4899",
+      tagColor: "#525252",
       highlights: [
         "Built an image processing application showcasing frequency-domain transformations and structural manipulation algorithms.",
       ]
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
       name: "Data Collection & Visualization System",
       tech: "Python, MongoDB, REST API",
       tag: "Infrastructure",
-      tagColor: "#10b981",
+      tagColor: "#404040",
       highlights: [
         "Developed a lightweight platform for structured data collection and visualization specifically tailored for field project applications.",
       ]
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "60px", paddingBottom: "60px" }}>
       {/* Page Hero */}
-      <section className="page-hero animate-fade-up" style={{ backgroundImage: "linear-gradient(135deg, #0891b2 0%, #2563eb 100%)" }}>
+      <section className="page-hero animate-fade-up">
         <div style={{ position: "relative", zIndex: 1 }}>
           <p className="eyebrow" style={{ color: "#fff", marginBottom: "8px", opacity: 0.85 }}>
             Portfolio Showcase

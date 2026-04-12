@@ -12,7 +12,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-bold text-white no-underline shadow-[0_4px_20px_rgba(99,102,241,0.35)] transition-opacity hover:opacity-90"
+        className="inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-bold text-white no-underline shadow-[var(--shadow-glow)] transition-opacity hover:opacity-90"
         style={{ background: "var(--gradient-hero)" }}
       >
         Back to home

@@ -43,7 +43,7 @@ export function SiteHeader() {
         borderBottom: scrolled
           ? "1px solid var(--border-subtle)"
           : "1px solid transparent",
-        boxShadow: scrolled ? "0 4px 24px rgba(99,102,241,0.08)" : "none",
+        boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.06)" : "none",
       }}
     >
       <div
@@ -116,7 +116,7 @@ export function SiteHeader() {
             border: "1px solid var(--border-medium)",
             borderRadius: "9999px",
             padding: "5px",
-            boxShadow: "0 2px 12px rgba(99,102,241,0.08)",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
           }}
         >
           {navItems.map((item) => {
@@ -153,7 +153,7 @@ export function SiteHeader() {
               fontWeight: 600,
               textDecoration: "none",
               letterSpacing: "0.02em",
-              boxShadow: "0 4px 14px rgba(99,102,241,0.35)",
+              boxShadow: "var(--shadow-glow)",
               transition: "opacity 0.2s, transform 0.2s",
             }}
             onMouseEnter={(e) => {
@@ -225,8 +225,8 @@ export function SiteHeader() {
                   borderRadius: "12px",
                   fontSize: "0.88rem",
                   fontWeight: isActive ? 600 : 500,
-                  color: isActive ? "#fff" : "var(--text-main)",
-                  background: isActive ? "var(--accent)" : "transparent",
+                  color: isActive ? "var(--bg-surface)" : "var(--text-main)",
+                  background: isActive ? "var(--text-main)" : "transparent",
                   textDecoration: "none",
                   transition: "background 0.2s",
                 }}

@@ -44,12 +44,12 @@ function HeroSection() {
       <div
         className="glow-orb"
         style={{ width: 420, height: 420, top: -100, right: -100,
-          background: "radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%)" }}
+          background: "var(--glow-orb-strong)" }}
       />
       <div
         className="glow-orb"
         style={{ width: 300, height: 300, bottom: -60, left: -40,
-          background: "radial-gradient(circle, rgba(139,92,246,0.20) 0%, transparent 70%)" }}
+          background: "var(--glow-orb-soft)" }}
       />
 
       <div style={{ position: "relative", zIndex: 1 }}>
@@ -88,7 +88,7 @@ function HeroSection() {
                 border: "3px solid transparent",
                 background: "var(--gradient-hero)",
                 padding: "3px",
-                boxShadow: "0 0 40px rgba(99,102,241,0.35)",
+                boxShadow: "var(--shadow-glow)",
               }}
             >
               <div style={{ borderRadius: "22px", overflow: "hidden", width: "100%", height: "100%" }}>
@@ -176,7 +176,7 @@ function HeroSection() {
               background: "var(--gradient-hero)", color: "#fff",
               fontSize: "0.90rem", fontWeight: 700,
               textDecoration: "none", letterSpacing: "0.02em",
-              boxShadow: "0 4px 20px rgba(99,102,241,0.40)"
+              boxShadow: "var(--shadow-glow)"
             }}
           >
             ✉ Email Me
@@ -442,21 +442,21 @@ function FeaturedProjects() {
       name: "Real-Time Credit Card Fraud Detection",
       tech: "PySpark · Kafka · Hadoop · Docker · Streamlit",
       tag: "Big Data",
-      tagColor: "#6366f1",
+      tagColor: "#404040",
       desc: "Lambda architecture pipeline processing 280K+ transactions in real-time with sub-2s fraud alert latency.",
     },
     {
       name: "Eventligo Platform",
       tech: "Web Application · Data Integration",
       tag: "Full-Stack",
-      tagColor: "#8b5cf6",
+      tagColor: "#525252",
       desc: "Co-designed a web platform for discovering, creating, and managing events with analytics-ready logging.",
     },
     {
       name: "Real-Time Monitoring Dashboard",
       tech: "Python · Power BI",
       tag: "Analytics",
-      tagColor: "#06b6d4",
+      tagColor: "#737373",
       desc: "Interactive dashboard aggregating live operational data into intuitive KPIs for decision-makers.",
     },
   ];

@@ -62,7 +62,7 @@ export default function ExperiencePage() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "60px", paddingBottom: "60px" }}>
       {/* Page Hero */}
-      <section className="page-hero animate-fade-up" style={{ backgroundImage: "linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)" }}>
+      <section className="page-hero animate-fade-up">
         <div style={{ position: "relative", zIndex: 1 }}>
           <p className="eyebrow" style={{ color: "#fff", marginBottom: "8px", opacity: 0.85 }}>
             Career Journey

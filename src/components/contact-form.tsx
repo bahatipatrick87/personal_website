@@ -145,7 +145,7 @@ export function ContactForm({ email }: Props) {
           fontWeight: 700,
           cursor: "pointer",
           border: "none",
-          boxShadow: "0 4px 14px rgba(99,102,241,0.35)",
+          boxShadow: "var(--shadow-glow)",
           textAlign: "center" as const,
         }}
       >

@@ -1,11 +1,11 @@
-/** Align Clerk UI with site tokens (indigo / violet accent, rounded cards). */
+/** Clerk UI aligned with monochrome site theme. */
 export const clerkAppearance = {
   variables: {
-    colorPrimary: "#6366f1",
+    colorPrimary: "#171717",
     colorDanger: "#dc2626",
-    colorSuccess: "#059669",
-    colorWarning: "#d97706",
-    colorNeutral: "#64748b",
+    colorSuccess: "#16a34a",
+    colorWarning: "#ca8a04",
+    colorNeutral: "#737373",
     borderRadius: "0.75rem",
     fontFamily: '"Inter", "Outfit", system-ui, sans-serif',
     fontSize: "0.9375rem",
@@ -17,8 +17,8 @@ export const clerkAppearance = {
     socialButtonsBlockButton:
       "border-[color:var(--border-medium)] bg-[color:var(--bg-surface-soft)] text-[color:var(--text-main)]",
     formButtonPrimary:
-      "bg-gradient-to-r from-indigo-500 via-violet-500 to-cyan-600 shadow-md",
-    footerActionLink: "text-indigo-600 dark:text-indigo-400",
+      "bg-[#171717] text-white shadow-md hover:opacity-90 dark:bg-[#fafafa] dark:text-[#0a0a0a]",
+    footerActionLink: "text-neutral-700 dark:text-neutral-300",
     identityPreviewText: "text-[color:var(--text-main)]",
     formFieldLabel: "text-[color:var(--text-secondary)]",
     formFieldInput:

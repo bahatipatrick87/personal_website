@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "60px", paddingBottom: "60px" }}>
       {/* Page Hero */}
-      <section className="page-hero animate-fade-up" style={{ backgroundImage: "linear-gradient(135deg, #7c3aed 0%, #ec4899 100%)" }}>
+      <section className="page-hero animate-fade-up">
         <div style={{ position: "relative", zIndex: 1 }}>
           <p className="eyebrow" style={{ color: "#fff", marginBottom: "8px", opacity: 0.85 }}>
             Get in touch

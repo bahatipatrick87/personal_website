@@ -81,7 +81,7 @@ export default async function DashboardPage() {
           className="inline-flex flex-1 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           style={{
             background: "var(--gradient-hero)",
-            boxShadow: "0 4px 14px rgba(99,102,241,0.35)",
+            boxShadow: "var(--shadow-glow)",
           }}
         >
           Contact page
