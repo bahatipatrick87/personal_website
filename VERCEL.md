@@ -1,5 +1,51 @@
 # Deploy on Vercel (safe setup)
 
+## First-time deploy (step by step)
+
+1. **Push your code to GitHub**  
+   Repo should contain `package.json` and `src/` at the root (e.g. `github.com/bahatipatrick87/personal_website`).
+
+2. **Open Vercel**  
+   Go to [vercel.com](https://vercel.com) → sign in with **GitHub**.
+
+3. **Import the project**  
+   **Add New… → Project** → select **`personal_website`** (or your repo) → **Import**.
+
+4. **Configure the project**  
+   - **Framework Preset:** Next.js (auto-detected).  
+   - **Root Directory:** leave **empty** unless your app is in a subfolder (then set e.g. `my-website`).  
+   - **Build Command:** `npm run build` (default).  
+   - **Output:** default (do not override for App Router).
+
+5. **Environment variables (before or right after first deploy)**  
+   Expand **Environment Variables** and add:
+
+   | Name | Value |
+   |------|--------|
+   | `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | From [Clerk](https://dashboard.clerk.com) → **API Keys** → Publishable key (`pk_…`) |
+   | `CLERK_SECRET_KEY` | Same page → Secret key (`sk_…`) |
+   | `NEXT_PUBLIC_SITE_URL` | After first deploy, set to your **production** URL, e.g. `https://personal-website-xxx.vercel.app` (no trailing slash) |
+
+   For **each** variable, select **both** **Production** and **Preview** (checkboxes).  
+   Optional: `DASHBOARD_ALLOWED_USER_IDS` (same environments).
+
+6. **Deploy**  
+   Click **Deploy**. Wait for the build to finish.
+
+7. **Clerk: allow your Vercel URL**  
+   In [Clerk Dashboard](https://dashboard.clerk.com) → your application → **Configure → Domains** (and any **redirect / allowed origins** settings) add:
+   - Your production `https://….vercel.app` URL (and custom domain if you add one later).
+
+8. **Fix site URL if needed**  
+   Copy the **production** URL from Vercel (**Deployments** → open the **Production** deployment → visit). Set `NEXT_PUBLIC_SITE_URL` to that exact `https://…` value → **Save** → **Deployments → … → Redeploy**.
+
+9. **Optional: custom domain**  
+   Vercel → **Settings → Domains** → add your domain and follow DNS instructions.
+
+Your detailed troubleshooting guide for **500 / Preview URLs** is below.
+
+---
+
 An **Internal Server Error** on Vercel is almost always missing or wrong **environment variables**, or **Clerk** not allowing your Vercel URL.
 
 ## Preview URL looks like `…-git-main-….vercel.app` → 500
