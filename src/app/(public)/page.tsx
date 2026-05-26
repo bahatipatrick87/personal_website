@@ -6,10 +6,10 @@ import { SocialContactList } from "@/components/social-contact-list";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Bahati Patrick | Data Scientist & Business Coach",
+    absolute: "Bahati Patrick | Data Scientist & AI Researcher",
   },
   description:
-    "Personal website of Bahati Patrick — a data scientist, business coach, and research assistant specializing in machine learning, big data, and data-driven problem solving.",
+    "Personal website of Bahati Patrick — Data Scientist, AI Researcher, and Computational Neuroscience Intern specializing in machine learning, spiking neural networks, big data engineering, and data-driven problem solving.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";
@@ -129,7 +129,7 @@ function HeroSection() {
                 letterSpacing: "0.01em",
               }}
             >
-              Data Scientist · Business Coach · Research Assistant
+              Data Scientist · AI Researcher · Computational Neuroscience Intern
             </p>
           </div>
         </div>
@@ -153,12 +153,13 @@ function HeroSection() {
             that drive business growth and social impact across private sector and humanitarian projects.
           </p>
           <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
-            Currently pursuing a{" "}
+            Currently engaged as a{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
-              Master&apos;s Degree in Data Science
+              Computational Neuroscience Research Intern
             </strong>{" "}
-            at Università degli Studi di Messina, Italy — leveraging a strong background in Business
-            Information Technology and field research in Uganda.
+            at the Brian Lab, Università degli Studi di Messina — working on biologically inspired spiking neural
+            networks, STDP learning, and reward-modulated synaptic plasticity, while completing a{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Master&apos;s Degree in Data Science</strong>.
           </p>
         </div>
 
@@ -261,10 +262,10 @@ function HeroSection() {
           style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}
         >
           {[
-            { label: " Location", value: "Messina, Italy · Uganda" },
-            { label: " Focus", value: "Data Science & Analytics" },
-            { label: " Degree", value: "MSc Data Science (2024–2026)" },
-            { label: " University", value: "UniME, Italy" },
+            { label: "Location", value: "Messina, Italy" },
+            { label: "Focus", value: "AI, Data Science & Neuroscience" },
+            { label: "Degree", value: "MSc Data Science (2024–2026)" },
+            { label: "Role", value: "Research Intern · Brian Lab" },
           ].map((chip) => (
             <div
               key={chip.label}
@@ -289,10 +290,10 @@ function HeroSection() {
 /* ─── Stats Banner ─────────────────────────────────────────────────── */
 function StatsBanner() {
   const stats = [
-    { value: "5+", label: "Years Experience", icon: "" },
+    { value: "7+", label: "Years Experience", icon: "" },
     { value: "10+", label: "Projects Delivered", icon: "" },
     { value: "5", label: "Languages Spoken", icon: "🌍" },
-    { value: "4.45", label: "GPA / 5.00", icon: "" },
+    { value: "4.45", label: "BSc GPA / 5.00", icon: "" },
     { value: "MSc", label: "Data Science", icon: "🎓" },
   ];
 
@@ -439,6 +440,13 @@ function SectionCard({
 function FeaturedProjects() {
   const projects = [
     {
+      name: "Reward-Modulated Spiking Neural Network (R-STDP)",
+      tech: "Brian2 · Python · Computational Neuroscience",
+      tag: "Neuroscience",
+      tagColor: "#1e5091",
+      desc: "Full conductance-based LIF network with STDP and reward-modulated synaptic plasticity, eligibility traces, and publication-quality LTP/LTD visualisation.",
+    },
+    {
       name: "Real-Time Credit Card Fraud Detection",
       tech: "PySpark · Kafka · Hadoop · Docker · Streamlit",
       tag: "Big Data",
@@ -446,18 +454,11 @@ function FeaturedProjects() {
       desc: "Lambda architecture pipeline processing 280K+ transactions in real-time with sub-2s fraud alert latency.",
     },
     {
-      name: "Eventligo Platform",
-      tech: "Web Application · Data Integration",
-      tag: "Full-Stack",
+      name: "Plant Disease Detection (CNN)",
+      tech: "TensorFlow · Keras · Python",
+      tag: "Deep Learning",
       tagColor: "#525252",
-      desc: "Co-designed a web platform for discovering, creating, and managing events with analytics-ready logging.",
-    },
-    {
-      name: "Real-Time Monitoring Dashboard",
-      tech: "Python · Power BI",
-      tag: "Analytics",
-      tagColor: "#737373",
-      desc: "Interactive dashboard aggregating live operational data into intuitive KPIs for decision-makers.",
+      desc: "CNN trained on 70,000+ PlantVillage images across 38 classes, achieving ~91% test accuracy with data augmentation and batch normalisation.",
     },
   ];
 
@@ -514,14 +515,14 @@ function FeaturedProjects() {
 function QuickExperience() {
   const roles = [
     {
+      role: "Computational Neuroscience Research Intern",
+      org: "Università degli Studi di Messina — Brian Lab",
+      period: "Mar 2026 – Present",
+    },
+    {
       role: "Business Coach",
       org: "AVSI Foundation – Nakivale, Uganda",
       period: "Oct 2023 – Oct 2024",
-    },
-    {
-      role: "Data Clerk & Research Assistant",
-      org: "Windle International Uganda",
-      period: "2021 – 2022",
     },
     {
       role: "Data Analyst Intern",
@@ -529,9 +530,9 @@ function QuickExperience() {
       period: "Jun – Sep 2022",
     },
     {
-      role: "Research Assistant",
-      org: "Save the Children – Nakivale",
-      period: "Aug 2023",
+      role: "Data Clerk & Research Assistant",
+      org: "Windle International Uganda",
+      period: "2021 – 2022",
     },
   ];
 
@@ -634,9 +635,9 @@ function QuickEducation() {
 /* ─── Quick Info ────────────────────────────────────────────────────── */
 function QuickInfo() {
   const rows = [
-    { label: "Age", value: "26" },
     { label: "Location", value: "Messina, Sicily, Italy" },
     { label: "Nationality", value: "Ugandan" },
+    { label: "Current Role", value: "Research Intern — Brian Lab" },
     { label: "Studies", value: "MSc Data Science (2024–2026)" },
     { label: "University", value: "UniME, Italy" },
     { label: "Previous", value: "BSc BIT — CGPA 4.45 / 5.00" },
@@ -674,9 +675,9 @@ function QuickInfo() {
 function TopSkills() {
   const groups = [
     { label: "ML / AI", items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"] },
+    { label: "Neuroscience", items: ["Brian2", "SNN", "STDP", "R-STDP"] },
     { label: "Big Data", items: ["PySpark", "Kafka", "Hadoop", "Docker"] },
-    { label: "Visualization", items: ["Power BI", "Tableau", "Matplotlib"] },
-    { label: "Databases", items: ["PostgreSQL", "MongoDB", "MySQL"] },
+    { label: "Visualization", items: ["Power BI", "Streamlit", "Plotly"] },
   ];
 
   return (
@@ -741,7 +742,7 @@ function QuickContact() {
   return (
     <SectionCard title="Get In Touch" eyebrow="Let's collaborate">
       <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "16px", lineHeight: 1.65 }}>
-        I&apos;m open to data science, analytics, research, and data-driven program design opportunities.
+        Open to data science, AI research, computational neuroscience, and data engineering opportunities worldwide.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
         <a href={`mailto:${EMAIL}`} className="contact-item">

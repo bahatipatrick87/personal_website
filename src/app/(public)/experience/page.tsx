@@ -3,11 +3,24 @@ import { SectionCard } from "../page";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Bahati Patrick's complete professional journey in business coaching, data science, and research.",
+  description: "Bahati Patrick's complete professional journey in computational neuroscience, data science, business coaching, and research.",
 };
 
 export default function ExperiencePage() {
   const experiences = [
+    {
+      role: "Computational Neuroscience Research Intern",
+      org: "Università degli Studi di Messina — Brian Lab",
+      period: "March 2026 – Present",
+      highlights: [
+        "Implemented biologically inspired Spiking Neural Networks (SNNs) using the Brian2 simulator.",
+        "Developed and simulated Leaky Integrate-and-Fire (LIF) and conductance-based neuron models.",
+        "Designed Spike-Timing-Dependent Plasticity (STDP) and Reward-Modulated STDP (R-STDP) learning systems.",
+        "Investigated excitatory/inhibitory synaptic dynamics and eligibility trace mechanisms.",
+        "Visualised membrane voltage, synaptic conductance, and adaptive weight changes including LTP and LTD.",
+        "Built end-to-end experimental SNN simulation pipelines for computational neuroscience research.",
+      ]
+    },
     {
       role: "Business Coach",
       org: "AVSI Foundation – Nakivale, Isingiro District",
@@ -71,7 +84,7 @@ export default function ExperiencePage() {
             Experience
           </h1>
           <p style={{ fontSize: "1.05rem", fontWeight: 500, opacity: 0.9, maxWidth: "600px", lineHeight: 1.6 }}>
-            A comprehensive track record of impact across humanitarian settings, field research, and data operations in Uganda.
+            From computational neuroscience research in Italy to data science, business coaching, and field research in Uganda — a career built on impact.
           </p>
         </div>
       </section>
