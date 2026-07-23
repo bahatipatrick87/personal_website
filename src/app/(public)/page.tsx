@@ -183,8 +183,8 @@ function HeroSection() {
             ✉ Email Me
           </a>
           <a
-            href="https://github.com/bahatipatrick87/Resume"
-            target="_blank" rel="noreferrer"
+            href="/Bahati-Patrick-CV.pdf"
+            download="Bahati-Patrick-CV.pdf"
             className="hover-btn-secondary"
             style={{
               display: "inline-flex", alignItems: "center", gap: "7px",

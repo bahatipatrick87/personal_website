@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)", margin: 0 }}>Next.js App Router Fundamentals</h3>
                   <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>Aug 2025</span>
                 </div>
-                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>Vercel &mdash; <em>Certificate of Completion, issued by Guillermo Rauch (CEO, Vercel)</em></p>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>Vercel &mdash; <em>Certificate of Completion</em></p>
                 <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginTop: "8px" }}>
                   Hands-on training in Next.js App Router architecture, server components, routing, data fetching, and full-stack deployment on Vercel.
                 </p>

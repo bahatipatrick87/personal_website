@@ -5,10 +5,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTheme } from "@/components/theme-provider";
 import { useEffect, useState } from "react";
-import {
-  ClerkHeaderActions,
-  ClerkHeaderActionsMobile,
-} from "@/components/clerk-header-actions";
 
 const navItems = [
   { href: "/", label: "Home",       icon: "⌂" },
@@ -138,7 +134,6 @@ export function SiteHeader() {
         {/* Right actions (desktop) */}
         <div className="hidden sm:flex" style={{ alignItems: "center", gap: "8px" }}>
           <ThemeToggle />
-          <ClerkHeaderActions />
           <Link
             href="/contact"
             style={{
@@ -236,7 +231,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <ClerkHeaderActionsMobile onNavigate={() => setMenuOpen(false)} />
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}

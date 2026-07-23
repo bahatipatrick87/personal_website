@@ -72,10 +72,10 @@ export default function ContactPage() {
                 lineHeight: 1.6,
               }}
             >
-              Fill in the form and we&apos;ll open your email app with everything
-              ready to send.
+              Fill in the form and your message is sent straight to my inbox —
+              no email app required. I reply within a day or two.
             </p>
-            <ContactForm email={EMAIL} />
+            <ContactForm />
           </SectionCard>
         </div>
 

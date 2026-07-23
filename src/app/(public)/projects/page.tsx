@@ -44,15 +44,35 @@ export default function ProjectsPage() {
       ]
     },
     {
-      name: "Big Data Analytics — COVID-19 Global Pandemic",
-      tech: "HBase, Hive, Hadoop, Docker, Python",
+      name: "Big Data Analytics — Apache HBase & FDA CAERS Dataset",
+      tech: "Hadoop, HBase, Docker, Python",
       tag: "Big Data",
       tagColor: "#5c4b1e",
+      link: "https://github.com/bahatipatrick87/hbase_project_big_data",
       highlights: [
-        "Designed a distributed Big Data analytics platform over the Johns Hopkins COVID-19 dataset (187,000+ records, 190+ countries).",
-        "Built a multi-node Docker cluster integrating Apache HBase (NoSQL) and Apache Hive for SQL-based analytics.",
-        "Developed a Python preprocessing pipeline to transform raw time-series CSV data into HBase-optimised TSV format.",
-        "Performed analytics including pandemic wave detection, country-level mortality trends, and year-over-year death rate analysis using HiveQL.",
+        "Designed and deployed a multi-node Hadoop/HBase cluster (HDFS, YARN, ZooKeeper) using Docker to store and query real-world FDA adverse-event data.",
+        "Built a Python ETL pipeline converting 149,945 raw JSON adverse-event reports (233,821 linked product records) into HBase-ready TSV files, bulk-loaded via MapReduce ImportTsv.",
+        "Designed a normalised HBase schema (namespaces, column families, versioning, compression) and implemented DDL, CRUD/DML, and cluster administration via the HBase Shell.",
+      ]
+    },
+    {
+      name: "AI Customer Support Automation Platform",
+      tech: "n8n, OpenAI, Supabase, Airtable, Zendesk",
+      tag: "AI Automation",
+      tagColor: "#1e5091",
+      highlights: [
+        "Designed an AI-powered customer support workflow integrating semantic search, automated ticket classification, and Zendesk escalation.",
+        "Built a Retrieval-Augmented Generation (RAG) chatbot using a Supabase Vector Store, with automated Airtable logging and HTML/CSS analytics dashboards.",
+      ]
+    },
+    {
+      name: "Multi-Agent Marketing Campaign Generator",
+      tech: "n8n, Google Gemini, Google Docs",
+      tag: "AI Automation",
+      tagColor: "#1e5091",
+      highlights: [
+        "Developed a multi-agent AI system with specialised agents for campaign planning, content generation, and quality review.",
+        "Automated brand strategy and editorial plan generation with consistent tone enforcement via Google Docs integration.",
       ]
     },
     {
@@ -60,6 +80,7 @@ export default function ProjectsPage() {
       tech: "Web Application, React, Node.js, Data Integration",
       tag: "Full-Stack Web",
       tagColor: "#525252",
+      link: "https://github.com/bahatipatrick87/EventLingo-plateform",
       highlights: [
         "Co-designed and implemented a web platform that allows users to discover, create, and manage events in a unified interface.",
         "Built backend and data-handling components to support user registration, event workflows, and analytics-ready logging.",
@@ -81,6 +102,7 @@ export default function ProjectsPage() {
       tech: "Python, NumPy, OpenCV, Matplotlib",
       tag: "Computer Vision",
       tagColor: "#525252",
+      link: "https://github.com/bahatipatrick87/ImageProcessingManipulator",
       highlights: [
         "Developed a Python-based image processing application supporting filtering, transformation, and feature extraction.",
         "Showcased frequency-domain transformations and structural manipulation algorithms.",
@@ -151,6 +173,23 @@ export default function ProjectsPage() {
                   ))}
                 </ul>
               </div>
+
+              {proj.link && (
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    marginTop: "16px",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    color: "var(--accent)",
+                    textDecoration: "none",
+                  }}
+                >
+                  View on GitHub →
+                </a>
+              )}
             </div>
           ))}
         </div>

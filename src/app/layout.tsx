@@ -19,15 +19,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
   title: {
-    default: "Bahati Patrick | Data Scientist & Business Coach",
+    default: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
     template: "%s | Bahati Patrick",
   },
   description:
-    "Personal website of Bahati Patrick, a data scientist, business coach, and research assistant specializing in machine learning, big data, and data-driven problem solving.",
+    "Personal website of Bahati Patrick — Data Scientist specializing in machine learning, big data engineering, and computational neuroscience research.",
   openGraph: {
-    title: "Bahati Patrick | Data Scientist & Business Coach",
+    title: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
     description:
-      "Data scientist and business coach with experience in machine learning, big data, and social impact projects across Uganda and Italy.",
+      "Data Scientist with hands-on experience in machine learning, deep learning, and big data engineering, turning complex datasets into actionable insights and predictive models.",
     type: "website",
     locale: "en_US",
     siteName: "Bahati Patrick",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bahati Patrick | Data Scientist & Business Coach",
+    title: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
     description:
-      "Portfolio and academic profile of Bahati Patrick, data scientist and business coach.",
+      "Portfolio and academic profile of Bahati Patrick — Data Scientist and AI researcher.",
   },
 };
 
