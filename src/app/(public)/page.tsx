@@ -144,22 +144,40 @@ function HeroSection() {
               marginBottom: "14px",
             }}
           >
-            Results-driven data scientist with hands-on experience in{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
-              machine learning, big data, and data visualization
-            </strong>
-            . Passionate about transforming complex datasets into{" "}
-            <strong style={{ color: "var(--accent)", fontWeight: 600 }}>actionable insights</strong>{" "}
-            that drive business growth and social impact across private sector and humanitarian projects.
-          </p>
-          <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
-            Currently engaged as a{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
+            A results-driven{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Data Scientist</strong> and{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI Researcher</strong> currently
+            engaged as a{" "}
+            <strong style={{ color: "var(--accent)", fontWeight: 600 }}>
               Computational Neuroscience Research Intern
             </strong>{" "}
-            at the Brian Lab, Università degli Studi di Messina — working on biologically inspired spiking neural
-            networks, STDP learning, and reward-modulated synaptic plasticity, while completing a{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Master&apos;s Degree in Data Science</strong>.
+            at the Brian Lab, Università degli Studi di Messina. My research focuses on biologically inspired
+            spiking neural networks (SNNs), STDP learning rules, and reward-modulated synaptic plasticity.
+          </p>
+          <p
+            style={{
+              fontSize: "1.02rem",
+              lineHeight: 1.75,
+              color: "var(--text-secondary)",
+              marginBottom: "14px",
+            }}
+          >
+            My work spans{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
+              machine learning, deep learning, big data engineering, computational neuroscience, and data
+              visualisation
+            </strong>
+            , with a strong track record of developing predictive models, automating data pipelines, and
+            delivering clear insights to both technical and non-technical audiences.
+          </p>
+          <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
+            Before Italy, I built a solid foundation through field research and data roles in Uganda —
+            including business coaching for micro-enterprises with{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AVSI Foundation</strong>, humanitarian
+            data collection with{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Save the Children</strong>, and
+            education-focused research with{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Windle International Uganda</strong>.
           </p>
         </div>
 
