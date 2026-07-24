@@ -3,8 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { AppProviders } from "@/components/app-providers";
-import { getMetadataBase } from "@/lib/site";
+import { getMetadataBase, getSiteUrl } from "@/lib/site";
 import { SocialFooter } from "@/components/social-footer";
+import { SOCIAL } from "@/lib/social";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,8 +59,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = getSiteUrl();
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Bahati Patrick",
+    url: siteUrl,
+    image: `${siteUrl}/patrick-bahati.png`,
+    jobTitle: "Data Scientist",
+    email: "bahatipatrick87@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Messina",
+      addressCountry: "IT",
+    },
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "Università degli Studi di Messina" },
+      { "@type": "CollegeOrUniversity", name: "Nkumba University" },
+    ],
+    knowsAbout: [
+      "Data Science",
+      "Machine Learning",
+      "Big Data Engineering",
+      "Computational Neuroscience",
+    ],
+    sameAs: [SOCIAL.linkedin, SOCIAL.github],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[color:var(--bg-body)] text-[color:var(--text-main)]`}
       >
