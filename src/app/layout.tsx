@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
     description:
-      "Portfolio and academic profile of Bahati Patrick — Data Scientist and AI researcher.",
+      "Portfolio and academic profile of Bahati Patrick, Data Scientist.",
   },
 };
 

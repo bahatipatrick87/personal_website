@@ -6,10 +6,10 @@ import { SocialContactList } from "@/components/social-contact-list";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Bahati Patrick | Data Scientist & AI Researcher",
+    absolute: "Bahati Patrick | Data Scientist",
   },
   description:
-    "Personal website of Bahati Patrick — Data Scientist and AI Researcher with hands-on research experience in computational neuroscience, specializing in machine learning, spiking neural networks, big data engineering, and data-driven problem solving.",
+    "Personal website of Bahati Patrick — a Data Scientist with research experience in computational neuroscience, specializing in machine learning, big data engineering, and data-driven problem solving.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";
@@ -129,7 +129,7 @@ function HeroSection() {
                 letterSpacing: "0.01em",
               }}
             >
-              Data Scientist · AI Researcher · MSc Data Science Candidate
+              Data Scientist · MSc Data Science Candidate
             </p>
           </div>
         </div>
@@ -144,17 +144,14 @@ function HeroSection() {
               marginBottom: "14px",
             }}
           >
-            A results-driven{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Data Scientist</strong> and{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI Researcher</strong>, currently
-            completing a{" "}
+            I&apos;m a{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Data Scientist</strong>, currently
+            finishing my{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Master&apos;s Degree in Data Science</strong>{" "}
-            at the Università degli Studi di Messina. I recently completed a{" "}
-            <strong style={{ color: "var(--accent)", fontWeight: 600 }}>
-              Computational Neuroscience Research Internship
-            </strong>{" "}
-            at the Brian Lab, where my research focused on biologically inspired spiking neural networks (SNNs),
-            STDP learning rules, and reward-modulated synaptic plasticity.
+            at the Università degli Studi di Messina. I recently completed a research internship in{" "}
+            <strong style={{ color: "var(--accent)", fontWeight: 600 }}>computational neuroscience</strong> at
+            the Brian Lab, where I worked on spiking neural networks — a type of brain-inspired machine learning
+            model.
           </p>
           <p
             style={{
@@ -164,21 +161,20 @@ function HeroSection() {
               marginBottom: "14px",
             }}
           >
-            My work spans{" "}
+            My work covers{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
-              machine learning, deep learning, big data engineering, computational neuroscience, and data
-              visualisation
+              machine learning, deep learning, big data, and data visualisation
             </strong>
-            , with a strong track record of developing predictive models, automating data pipelines, and
-            delivering clear insights to both technical and non-technical audiences.
+            . I enjoy turning complex data into clear insights, building predictive models, and automating data
+            pipelines — and explaining it simply, whether you&apos;re technical or not.
           </p>
           <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
-            Before Italy, I built a solid foundation through field research and data roles in Uganda —
-            including business coaching for micro-enterprises with{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AVSI Foundation</strong>, humanitarian
-            data collection with{" "}
+            I also have hands-on experience from Uganda, including business coaching for small enterprises
+            with{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AVSI Foundation</strong>, data
+            collection with{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Save the Children</strong>, and
-            education-focused research with{" "}
+            education research with{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Windle International Uganda</strong>.
           </p>
         </div>
@@ -188,8 +184,8 @@ function HeroSection() {
           className="animate-fade-up delay-400"
           style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginBottom: "36px" }}
         >
-          <a
-            href={`mailto:${EMAIL}`}
+          <Link
+            href="/contact"
             className="hover-btn-primary"
             style={{
               display: "inline-flex", alignItems: "center", gap: "7px",
@@ -201,7 +197,7 @@ function HeroSection() {
             }}
           >
             ✉ Email Me
-          </a>
+          </Link>
           <a
             href="/Bahati-Patrick-CV.pdf"
             download="Bahati-Patrick-CV.pdf"
@@ -245,34 +241,6 @@ function HeroSection() {
             }}
           >
             GitHub
-          </a>
-          <a
-            href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer"
-            className="hover-btn-outline"
-            style={{
-              display: "inline-flex", alignItems: "center", gap: "7px",
-              padding: "12px 22px", borderRadius: "9999px",
-              color: "var(--text-secondary)",
-              border: "1.5px solid var(--border-subtle)",
-              fontSize: "0.88rem", fontWeight: 500,
-              textDecoration: "none"
-            }}
-          >
-            Instagram
-          </a>
-          <a
-            href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer"
-            className="hover-btn-outline"
-            style={{
-              display: "inline-flex", alignItems: "center", gap: "7px",
-              padding: "12px 22px", borderRadius: "9999px",
-              color: "var(--text-secondary)",
-              border: "1.5px solid var(--border-subtle)",
-              fontSize: "0.88rem", fontWeight: 500,
-              textDecoration: "none"
-            }}
-          >
-            Facebook
           </a>
         </div>
 

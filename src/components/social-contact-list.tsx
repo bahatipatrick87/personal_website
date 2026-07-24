@@ -2,9 +2,7 @@ import { SOCIAL, SOCIAL_LINK_LIST } from "@/lib/social";
 
 const ICONS: Record<(typeof SOCIAL_LINK_LIST)[number]["key"], string> = {
   linkedin: "in",
-  instagram: "📷",
   github: "⌥",
-  facebook: "f",
 };
 
 export function SocialContactList({ iconSize = "1.1rem" }: { iconSize?: string }) {

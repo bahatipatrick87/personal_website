@@ -84,7 +84,7 @@ export default function ExperiencePage() {
             Experience
           </h1>
           <p style={{ fontSize: "1.05rem", fontWeight: 500, opacity: 0.9, maxWidth: "600px", lineHeight: 1.6 }}>
-            From computational neuroscience research in Italy to data science, business coaching, and field research in Uganda — a career built on impact.
+            A summary of my roles in data science, research, and business coaching.
           </p>
         </div>
       </section>

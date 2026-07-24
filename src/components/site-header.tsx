@@ -97,7 +97,7 @@ export function SiteHeader() {
                 letterSpacing: "0.04em",
               }}
             >
-              Data Scientist &amp; AI Researcher
+              Data Scientist
             </span>
           </div>
         </Link>

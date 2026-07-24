@@ -39,23 +39,21 @@ export default function AboutPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
           <SectionCard title="My Journey" eyebrow="Professional Story">
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              I am Bahati Patrick — a results-driven <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> and{" "}
-              <strong style={{ color: "var(--accent)" }}>AI Researcher</strong>, currently completing a{" "}
-              <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong> at the
-              Università degli Studi di Messina. I recently completed a{" "}
-              <strong style={{ color: "var(--accent)" }}>Computational Neuroscience Research Internship</strong> at
-              the Brian Lab, where my research focused on biologically inspired spiking neural networks (SNNs),
-              STDP learning rules, and reward-modulated synaptic plasticity.
+              I am Bahati Patrick, a <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> currently
+              finishing my <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong>{" "}
+              at the Università degli Studi di Messina. I recently completed a research internship in{" "}
+              <strong style={{ color: "var(--accent)" }}>computational neuroscience</strong> at the Brian Lab,
+              where I worked on spiking neural networks — a type of brain-inspired machine learning model.
             </p>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              My work spans <strong style={{ color: "var(--accent)" }}>machine learning, deep learning, big data engineering,
-              computational neuroscience, and data visualisation</strong>, with a strong track record of developing predictive models,
-              automating data pipelines, and delivering clear insights to both technical and non-technical audiences.
+              My work covers <strong style={{ color: "var(--accent)" }}>machine learning, deep learning, big data,
+              and data visualisation</strong>. I enjoy turning complex data into clear insights, building predictive
+              models, and automating data pipelines — and explaining it simply, whether you&apos;re technical or not.
             </p>
             <p style={{ color: "var(--text-secondary)" }}>
-              Before Italy, I built a solid foundation through field research and data roles in Uganda — including business coaching
-              for micro-enterprises with AVSI Foundation, humanitarian data collection with Save the Children, and education-focused
-              research with Windle International Uganda.
+              I also have hands-on experience from Uganda, including business coaching for small enterprises with
+              AVSI Foundation, data collection with Save the Children, and education research with Windle
+              International Uganda.
             </p>
           </SectionCard>
 
