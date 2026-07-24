@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SectionCard } from "../page";
 
 export const metadata: Metadata = {
@@ -39,9 +40,11 @@ export default function AboutPage() {
           <SectionCard title="My Journey" eyebrow="Professional Story">
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
               I am Bahati Patrick — a results-driven <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> and{" "}
-              <strong style={{ color: "var(--accent)" }}>AI Researcher</strong> currently engaged as a{" "}
-              <strong style={{ color: "var(--accent)" }}>Computational Neuroscience Research Intern</strong> at the Brian Lab,
-              Università degli Studi di Messina. My research focuses on biologically inspired spiking neural networks (SNNs),
+              <strong style={{ color: "var(--accent)" }}>AI Researcher</strong>, currently completing a{" "}
+              <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong> at the
+              Università degli Studi di Messina. I recently completed a{" "}
+              <strong style={{ color: "var(--accent)" }}>Computational Neuroscience Research Internship</strong> at
+              the Brian Lab, where my research focused on biologically inspired spiking neural networks (SNNs),
               STDP learning rules, and reward-modulated synaptic plasticity.
             </p>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
@@ -130,11 +133,17 @@ export default function AboutPage() {
                   <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>2025 &ndash; 2026</span>
                 </div>
                 <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>Academic Rapido TechFloor &mdash; <em>Funded by the Accenture Foundation</em></p>
-                <span style={{ fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "9999px", background: "var(--accent-soft)", color: "var(--accent)", border: "1px solid var(--border-subtle)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                  In Progress
+                <span style={{ fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "9999px", background: "rgba(22,163,74,0.12)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.35)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                  Completed
                 </span>
                 <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginTop: "8px" }}>
-                  AI-powered business process automation, workflow optimisation, prompt engineering, and AI integration for enterprise contexts.
+                  Built AI-powered business automation workflows using n8n, OpenAI, and REST/Google Workspace APIs
+                  for enterprise process optimisation. Applied prompt engineering, RAG pipelines, and multi-agent
+                  workflow design across real-world automation projects — see the{" "}
+                  <Link href="/projects" style={{ color: "var(--accent)", fontWeight: 600 }}>
+                    AI Customer Support Automation Platform and Multi-Agent Marketing Campaign Generator
+                  </Link>{" "}
+                  on the Projects page.
                 </p>
               </div>
 

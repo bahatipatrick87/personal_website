@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Bahati Patrick | Data Scientist & AI Researcher",
   },
   description:
-    "Personal website of Bahati Patrick — Data Scientist, AI Researcher, and Computational Neuroscience Intern specializing in machine learning, spiking neural networks, big data engineering, and data-driven problem solving.",
+    "Personal website of Bahati Patrick — Data Scientist and AI Researcher with hands-on research experience in computational neuroscience, specializing in machine learning, spiking neural networks, big data engineering, and data-driven problem solving.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";
@@ -129,7 +129,7 @@ function HeroSection() {
                 letterSpacing: "0.01em",
               }}
             >
-              Data Scientist · AI Researcher · Computational Neuroscience Intern
+              Data Scientist · AI Researcher · MSc Data Science Candidate
             </p>
           </div>
         </div>
@@ -146,13 +146,15 @@ function HeroSection() {
           >
             A results-driven{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Data Scientist</strong> and{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI Researcher</strong> currently
-            engaged as a{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI Researcher</strong>, currently
+            completing a{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Master&apos;s Degree in Data Science</strong>{" "}
+            at the Università degli Studi di Messina. I recently completed a{" "}
             <strong style={{ color: "var(--accent)", fontWeight: 600 }}>
-              Computational Neuroscience Research Intern
+              Computational Neuroscience Research Internship
             </strong>{" "}
-            at the Brian Lab, Università degli Studi di Messina. My research focuses on biologically inspired
-            spiking neural networks (SNNs), STDP learning rules, and reward-modulated synaptic plasticity.
+            at the Brian Lab, where my research focused on biologically inspired spiking neural networks (SNNs),
+            STDP learning rules, and reward-modulated synaptic plasticity.
           </p>
           <p
             style={{
@@ -283,7 +285,7 @@ function HeroSection() {
             { label: "Location", value: "Messina, Italy" },
             { label: "Focus", value: "AI, Data Science & Neuroscience" },
             { label: "Degree", value: "MSc Data Science (2024–2026)" },
-            { label: "Role", value: "Research Intern · Brian Lab" },
+            { label: "Status", value: "Open to opportunities" },
           ].map((chip) => (
             <div
               key={chip.label}
@@ -478,6 +480,13 @@ function FeaturedProjects() {
       tagColor: "#525252",
       desc: "CNN trained on 70,000+ PlantVillage images across 38 classes, achieving ~91% test accuracy with data augmentation and batch normalisation.",
     },
+    {
+      name: "AI Customer Support Automation Platform",
+      tech: "n8n · OpenAI · Supabase · Airtable · Zendesk",
+      tag: "AI Automation",
+      tagColor: "#1e5091",
+      desc: "RAG chatbot with semantic search and automated ticket classification, escalating to Zendesk with logging and analytics dashboards.",
+    },
   ];
 
   return (
@@ -535,7 +544,7 @@ function QuickExperience() {
     {
       role: "Computational Neuroscience Research Intern",
       org: "Università degli Studi di Messina — Brian Lab",
-      period: "Mar 2026 – Present",
+      period: "Mar 2026 – Jun 2026",
     },
     {
       role: "Business Coach",
@@ -655,7 +664,7 @@ function QuickInfo() {
   const rows = [
     { label: "Location", value: "Messina, Sicily, Italy" },
     { label: "Nationality", value: "Ugandan" },
-    { label: "Current Role", value: "Research Intern — Brian Lab" },
+    { label: "Status", value: "Open to opportunities" },
     { label: "Studies", value: "MSc Data Science (2024–2026)" },
     { label: "University", value: "UniME, Italy" },
     { label: "Previous", value: "BSc BIT — CGPA 4.45 / 5.00" },

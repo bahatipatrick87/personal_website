@@ -11,7 +11,7 @@ export default function ExperiencePage() {
     {
       role: "Computational Neuroscience Research Intern",
       org: "Università degli Studi di Messina — Brian Lab",
-      period: "March 2026 – Present",
+      period: "March 2026 – June 2026",
       highlights: [
         "Implemented biologically inspired Spiking Neural Networks (SNNs) using the Brian2 simulator.",
         "Developed and simulated Leaky Integrate-and-Fire (LIF) and conductance-based neuron models.",
