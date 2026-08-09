@@ -56,10 +56,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
   }
 
-  const { name, email, subject, message, company } = (body ?? {}) as Record<string, unknown>;
+  const { name, email, subject, message, hpField } = (body ?? {}) as Record<string, unknown>;
 
   // Honeypot: bots fill hidden fields, real visitors leave it blank.
-  if (typeof company === "string" && company.trim() !== "") {
+  if (typeof hpField === "string" && hpField.trim() !== "") {
+    console.warn("Contact form: honeypot field was filled, treating as bot submission.");
     return NextResponse.json({ ok: true });
   }
 
@@ -92,12 +93,18 @@ export async function POST(req: Request) {
   try {
     saved = await saveMessage({ ...fields, emailed: emailResult.ok });
   } catch (err) {
-    console.error("Failed to save message to database:", err);
+    // Never let a database hiccup hide a message that was already emailed —
+    // but always log it loudly, since this is the one path where a visitor
+    // sees "sent" while the message silently fails to reach the inbox.
+    console.error(
+      `Failed to save message to database (from ${fields.email || "unknown"}, emailed=${emailResult.ok}):`,
+      err,
+    );
   }
 
   // Success if the message was captured by at least one channel.
   if (saved || emailResult.ok) {
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, stored: Boolean(saved), emailed: emailResult.ok });
   }
 
   return NextResponse.json(

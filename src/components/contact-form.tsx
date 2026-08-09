@@ -17,7 +17,7 @@ export function ContactForm() {
       email: String(fd.get("email") ?? "").trim(),
       subject: String(fd.get("subject") ?? "").trim(),
       message: String(fd.get("body") ?? "").trim(),
-      company: String(fd.get("company") ?? ""), // honeypot
+      hpField: String(fd.get("hp_field") ?? ""), // honeypot
     };
 
     setStatus("sending");
@@ -61,12 +61,19 @@ export function ContactForm() {
       style={{ display: "flex", flexDirection: "column", gap: "16px" }}
       aria-label="Contact form"
     >
-      {/* Honeypot field — hidden from real visitors, bots tend to fill it in. */}
+      {/*
+        Honeypot field — hidden from real visitors, bots tend to fill it in.
+        Deliberately named/labelled to avoid matching browser autofill
+        heuristics (e.g. "company", "website") that can silently populate
+        even hidden inputs and cause a real visitor's message to be dropped.
+      */}
       <input
         type="text"
-        name="company"
+        name="hp_field"
         tabIndex={-1}
         autoComplete="off"
+        data-lpignore="true"
+        data-1p-ignore="true"
         style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
         aria-hidden="true"
       />
