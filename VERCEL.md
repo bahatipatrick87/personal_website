@@ -23,14 +23,26 @@
    | Name | Value |
    |------|--------|
    | `NEXT_PUBLIC_SITE_URL` | After first deploy, set to your **production** URL, e.g. `https://personal-website-xxx.vercel.app` (no trailing slash) |
-   | `RESEND_API_KEY` | From [resend.com/api-keys](https://resend.com/api-keys) — powers the contact form |
-   | `CONTACT_TO_EMAIL` | Inbox that receives contact-form messages |
+   | `ADMIN_USER` | Username for the private `/admin` inbox |
+   | `ADMIN_PASSWORD` | Password for the private `/admin` inbox — pick something strong |
+   | `RESEND_API_KEY` | Optional. From [resend.com/api-keys](https://resend.com/api-keys) — emails you each contact-form message |
+   | `CONTACT_TO_EMAIL` | Inbox that receives emailed messages |
    | `CONTACT_FROM_EMAIL` | Optional — sender identity (defaults to Resend's sandbox address) |
 
    For **each** variable, select **both** **Production** and **Preview** (checkboxes).
 
+   `POSTGRES_URL` is *not* set here manually — see step 6a.
+
 6. **Deploy**
    Click **Deploy**. Wait for the build to finish.
+
+6a. **Attach a database (stores every contact-form message)**
+   **Project → Storage → Create Database → Postgres** (built on Neon, free tier available) →
+   **Connect to Project** and tick **Production** + **Preview**. Vercel adds `POSTGRES_URL`
+   automatically — no copy-pasting a connection string.
+   Then **Deployments → … → Redeploy** so the new env var takes effect. Messages sent through
+   `/contact` will now appear at `https://your-site.vercel.app/admin` (login with
+   `ADMIN_USER` / `ADMIN_PASSWORD` from step 5).
 
 7. **Fix site URL if needed**
    Copy the **production** URL from Vercel (**Deployments** → open the **Production** deployment → visit). Set `NEXT_PUBLIC_SITE_URL` to that exact `https://…` value → **Save** → **Deployments → … → Redeploy**.
@@ -50,13 +62,13 @@ That is a **Preview** deployment (every git branch gets its own URL), **not** yo
 
 **Cause — Env vars only on Production (most common)**
 In Vercel, each variable has checkboxes: **Production**, **Preview**, **Development**.
-If you only ticked **Production**, Preview builds run **without** `RESEND_API_KEY` → the contact
-form returns a 500 on that deployment (the rest of the site still renders fine, since it doesn't
-depend on the env var).
+If you only ticked **Production**, Preview builds run **without** `POSTGRES_URL` /
+`ADMIN_PASSWORD` / `RESEND_API_KEY` → the contact form or `/admin` can fail on that deployment
+(the rest of the site still renders fine, since it doesn't depend on those env vars).
 
-**Fix:** **Settings → Environment Variables** → open `RESEND_API_KEY`, `CONTACT_TO_EMAIL`,
-`CONTACT_FROM_EMAIL`, and `NEXT_PUBLIC_SITE_URL` → enable **Preview** (and Production). Save →
-**Redeploy** that preview.
+**Fix:** **Settings → Environment Variables** → open `POSTGRES_URL`, `ADMIN_USER`,
+`ADMIN_PASSWORD`, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, and
+`NEXT_PUBLIC_SITE_URL` → enable **Preview** (and Production). Save → **Redeploy** that preview.
 
 **Quick test:** Open your **Production** deployment URL in Vercel (the one without `git-main` in
 the name). If Production works but Preview does not, it is almost always missing **Preview env
@@ -75,7 +87,9 @@ In **Project → Settings → Environment Variables**, add these for **Productio
 | Name | Value | Notes |
 |------|--------|--------|
 | `NEXT_PUBLIC_SITE_URL` | `https://your-project.vercel.app` or your custom domain | **Include `https://`**, no trailing slash. |
-| `RESEND_API_KEY` | From [resend.com/api-keys](https://resend.com/api-keys) | **Server only** — never expose in client code. |
+| `POSTGRES_URL` | Auto-added when you connect a Postgres store (Storage tab) | Stores every contact-form message; powers `/admin`. |
+| `ADMIN_USER` / `ADMIN_PASSWORD` | Your choice | Login for the private `/admin` inbox. |
+| `RESEND_API_KEY` | From [resend.com/api-keys](https://resend.com/api-keys) | Optional. **Server only** — never expose in client code. |
 | `CONTACT_TO_EMAIL` | Your email address | Defaults to `bahatipatrick87@gmail.com` if unset. |
 | `CONTACT_FROM_EMAIL` | Sender shown on outgoing emails | Optional — defaults to Resend's sandbox sender. |
 
@@ -93,7 +107,11 @@ In **Project → Settings → Environment Variables**, add these for **Productio
 
 ## 4. Quick checklist
 
-- [ ] `RESEND_API_KEY` is set on Vercel (not only in `.env.local` on your laptop).
+- [ ] A Postgres database is connected under **Storage** (so `POSTGRES_URL` is set) — contact
+      messages are otherwise not saved anywhere.
+- [ ] `ADMIN_USER` / `ADMIN_PASSWORD` are set on Vercel so `/admin` isn't locked out.
+- [ ] `RESEND_API_KEY` is set on Vercel if you want email notifications too (not only in
+      `.env.local` on your laptop).
 - [ ] `NEXT_PUBLIC_SITE_URL` matches how users open the site (`https://...`).
 - [ ] Root Directory matches where `package.json` lives in the repo.
 - [ ] Redeploy after any env change.
@@ -102,7 +120,8 @@ In **Project → Settings → Environment Variables**, add these for **Productio
 
 ```bash
 cp .env.example .env.local
-# fill in real RESEND_API_KEY and NEXT_PUBLIC_SITE_URL=http://localhost:3000
+# fill in real POSTGRES_URL / ADMIN_PASSWORD / RESEND_API_KEY and
+# NEXT_PUBLIC_SITE_URL=http://localhost:3000
 npm run build && npm run start
 ```
 

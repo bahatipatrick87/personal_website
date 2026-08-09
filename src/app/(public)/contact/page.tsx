@@ -61,7 +61,7 @@ export default function ContactPage() {
           </SectionCard>
         </div>
 
-        {/* Message Form (Visual Only for now) */}
+        {/* Message form — posts to /api/contact, which stores the message and emails it */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <SectionCard title="Send a Message" eyebrow="Direct Line">
             <p

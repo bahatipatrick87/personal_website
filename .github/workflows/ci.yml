@@ -1,5 +1,5 @@
-# Runs on every push and PR. Full production build still needs Clerk env vars
-# (see README) — use Vercel or `npm run build` locally with `.env.local`.
+# Runs on every push and PR. A full production build needs database/email env
+# vars (see README) — use Vercel or `npm run build` locally with `.env.local`.
 name: CI
 
 on:

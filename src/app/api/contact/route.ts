@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { isDatabaseConfigured, saveMessage } from "@/lib/db";
 
 export const runtime = "nodejs";
 
@@ -13,6 +14,38 @@ function escapeHtml(value: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+async function sendEmail(fields: { name: string; email: string; subject: string; message: string }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return { attempted: false, ok: false };
+
+  try {
+    const resend = new Resend(apiKey);
+    const { error } = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: TO_EMAIL,
+      replyTo: fields.email || undefined,
+      subject: `[Portfolio] ${fields.subject || "New message from your website"}`,
+      html: `
+        <div style="font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.6; color: #171717;">
+          <p><strong>Name:</strong> ${escapeHtml(fields.name) || "—"}</p>
+          <p><strong>Email:</strong> ${escapeHtml(fields.email) || "—"}</p>
+          <p><strong>Subject:</strong> ${escapeHtml(fields.subject) || "—"}</p>
+          <p><strong>Message:</strong></p>
+          <p style="white-space: pre-wrap;">${escapeHtml(fields.message)}</p>
+        </div>
+      `,
+    });
+    if (error) {
+      console.error("Resend error:", error);
+      return { attempted: true, ok: false };
+    }
+    return { attempted: true, ok: true };
+  } catch (err) {
+    console.error("Resend threw:", err);
+    return { attempted: true, ok: false };
+  }
 }
 
 export async function POST(req: Request) {
@@ -42,40 +75,33 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("RESEND_API_KEY is not set.");
+  if (!isDatabaseConfigured && !process.env.RESEND_API_KEY) {
+    console.error("Contact form has no delivery method: no database and no RESEND_API_KEY configured.");
     return NextResponse.json(
-      { ok: false, error: "Email service is not configured yet." },
+      { ok: false, error: "The contact form isn't fully set up yet. Please email directly instead." },
       { status: 500 },
     );
   }
 
-  const resend = new Resend(apiKey);
+  const fields = { name: nameStr, email: emailStr, subject: subjectStr, message: messageStr };
 
-  const { error } = await resend.emails.send({
-    from: FROM_EMAIL,
-    to: TO_EMAIL,
-    replyTo: emailStr || undefined,
-    subject: `[Portfolio] ${subjectStr || "New message from your website"}`,
-    html: `
-      <div style="font-family: system-ui, sans-serif; font-size: 15px; line-height: 1.6; color: #171717;">
-        <p><strong>Name:</strong> ${escapeHtml(nameStr) || "—"}</p>
-        <p><strong>Email:</strong> ${escapeHtml(emailStr) || "—"}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subjectStr) || "—"}</p>
-        <p><strong>Message:</strong></p>
-        <p style="white-space: pre-wrap;">${escapeHtml(messageStr)}</p>
-      </div>
-    `,
-  });
+  // Send the email first so we know whether to mark the stored row as emailed.
+  const emailResult = await sendEmail(fields);
 
-  if (error) {
-    console.error("Resend error:", error);
-    return NextResponse.json(
-      { ok: false, error: "Could not send your message. Please try again shortly." },
-      { status: 502 },
-    );
+  let saved = null;
+  try {
+    saved = await saveMessage({ ...fields, emailed: emailResult.ok });
+  } catch (err) {
+    console.error("Failed to save message to database:", err);
   }
 
-  return NextResponse.json({ ok: true });
+  // Success if the message was captured by at least one channel.
+  if (saved || emailResult.ok) {
+    return NextResponse.json({ ok: true });
+  }
+
+  return NextResponse.json(
+    { ok: false, error: "Could not send your message. Please try again shortly, or email directly." },
+    { status: 502 },
+  );
 }
