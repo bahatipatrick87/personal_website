@@ -168,6 +168,19 @@ function HeroSection() {
             . I enjoy turning complex data into clear insights, building predictive models, and automating data
             pipelines — and explaining it simply, whether you&apos;re technical or not.
           </p>
+          <p
+            style={{
+              fontSize: "1.02rem",
+              lineHeight: 1.75,
+              color: "var(--text-secondary)",
+              marginBottom: "14px",
+            }}
+          >
+            Most recently, I built and benchmarked a{" "}
+            <strong style={{ color: "var(--accent)", fontWeight: 600 }}>federated learning system</strong>{" "}
+            (FedAvg vs. FedMedian) simulating 8 edge clients training on non-IID CIFAR-10 data with PyTorch and
+            Flower — including a Byzantine-robustness test against a corrupted client update.
+          </p>
           <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
             I also have hands-on experience from Uganda, including business coaching for small enterprises
             with{" "}
@@ -428,6 +441,13 @@ function SectionCard({
 function FeaturedProjects() {
   const projects = [
     {
+      name: "Comparing Federated Aggregation Strategies: FedAvg vs. FedMedian",
+      tech: "PyTorch · Flower (flwr) · Non-IID CIFAR-10",
+      tag: "Federated Learning",
+      tagColor: "#7c3aed",
+      desc: "Simulated 8 edge clients training a residual CNN on non-IID (Dirichlet-partitioned) CIFAR-10, benchmarking FedAvg vs. FedMedian. A Byzantine robustness test showed FedMedian held 64% accuracy under a corrupted client update versus FedAvg's collapse to 10%.",
+    },
+    {
       name: "Reward-Modulated Spiking Neural Network (R-STDP)",
       tech: "Brian2 · Python · Computational Neuroscience",
       tag: "Neuroscience",
@@ -670,6 +690,7 @@ function QuickInfo() {
 function TopSkills() {
   const groups = [
     { label: "ML / AI", items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"] },
+    { label: "Federated Learning", items: ["Flower (flwr)", "FedAvg", "FedMedian", "Byzantine robustness"] },
     { label: "Neuroscience", items: ["Brian2", "SNN", "STDP", "R-STDP"] },
     { label: "Big Data", items: ["PySpark", "Kafka", "Hadoop", "Docker"] },
     { label: "Visualization", items: ["Power BI", "Streamlit", "Plotly"] },

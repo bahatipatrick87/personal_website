@@ -8,6 +8,19 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const projects = [
     {
+      name: "Comparing Federated Aggregation Strategies: FedAvg vs. FedMedian on CIFAR-10",
+      tech: "Python, PyTorch, Flower (flwr), pandas, matplotlib",
+      tag: "Federated Learning",
+      tagColor: "#7c3aed",
+      link: "https://github.com/bahatipatrick87/Comparing_Federated_aggregation_strategies",
+      highlights: [
+        "Built an end-to-end federated learning pipeline simulating 8 edge clients with non-IID data (Dirichlet-partitioned CIFAR-10), training a ~2M-parameter residual CNN across 15 communication rounds.",
+        "Implemented and benchmarked two server-side aggregation strategies — FedAvg (weighted mean) and FedMedian (coordinate-wise median) — isolating aggregation as the sole experimental variable.",
+        "Engineered a Byzantine-fault robustness experiment (a corrupted/scaled client update) that demonstrated FedAvg's accuracy collapsing to random-guess levels (10%) versus FedMedian holding 64%, surfacing a measurable robustness/accuracy trade-off between aggregation rules.",
+        "Automated metrics collection and analysis (per-round accuracy, loss, aggregation/training time, CPU usage) with a reusable pandas/matplotlib reporting pipeline.",
+      ]
+    },
+    {
       name: "Reward-Modulated Spiking Neural Network (R-STDP)",
       tech: "Brian2, Python, Computational Neuroscience",
       tag: "Neuroscience",

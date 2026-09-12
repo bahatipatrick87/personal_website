@@ -50,6 +50,17 @@ export default function AboutPage() {
               and data visualisation</strong>. I enjoy turning complex data into clear insights, building predictive
               models, and automating data pipelines — and explaining it simply, whether you&apos;re technical or not.
             </p>
+            <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
+              Most recently, I designed and built a{" "}
+              <strong style={{ color: "var(--accent)" }}>federated learning system</strong> comparing FedAvg and
+              FedMedian aggregation strategies — simulating 8 edge clients training on non-IID CIFAR-10 data with
+              PyTorch and Flower, and stress-testing both strategies against a simulated adversarial (Byzantine)
+              client update. See the full write-up on the{" "}
+              <Link href="/projects" style={{ color: "var(--accent)", fontWeight: 600 }}>
+                Projects page
+              </Link>
+              .
+            </p>
             <p style={{ color: "var(--text-secondary)" }}>
               I also have hands-on experience from Uganda, including business coaching for small enterprises with
               AVSI Foundation, data collection with Save the Children, and education research with Windle
@@ -78,6 +89,7 @@ export default function AboutPage() {
               {[
                 { label: "Programming Languages", items: ["Python", "SQL", "Java", "JavaScript", "HTML/CSS"] },
                 { label: "ML, Deep Learning & Neuroscience", items: ["Scikit-learn", "TensorFlow", "Keras", "PyTorch", "Brian2", "SNN", "STDP", "R-STDP"] },
+                { label: "Federated Learning", items: ["Flower (flwr)", "Client-server simulation", "Non-IID partitioning (Dirichlet)", "FedAvg", "FedMedian", "Byzantine fault tolerance"] },
                 { label: "Data Science & Computing", items: ["NumPy", "Pandas", "SciPy", "Matplotlib", "Seaborn", "Feature Engineering"] },
                 { label: "Big Data & Engineering", items: ["PySpark", "Spark SQL", "Apache Kafka", "Hadoop (HDFS)", "MapReduce", "HBase", "Hive"] },
                 { label: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Oracle"] },
@@ -85,6 +97,7 @@ export default function AboutPage() {
                 { label: "Computer Vision & NLP", items: ["OpenCV", "CNNs for Image Classification"] },
                 { label: "Web & Backend", items: ["React", "Angular", "Node.js", "Next.js", "Spring Boot", "ASP.NET Core", "Django"] },
                 { label: "DevOps & Tools", items: ["Docker", "Docker Compose", "Kubernetes", "Git", "GitHub"] },
+                { label: "Practices", items: ["Experiment design", "Reproducible ML pipelines", "Performance/timing profiling", "Technical documentation"] },
               ].map(group => (
                 <div key={group.label}>
                   <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--text-main)", marginBottom: "8px" }}>
