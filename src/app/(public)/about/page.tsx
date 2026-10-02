@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionCard } from "../page";
 
@@ -167,9 +168,11 @@ export default function AboutPage() {
               <div style={{ padding: "14px", background: "var(--bg-surface-soft)", borderRadius: "12px", border: "1px solid var(--border-subtle)" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px", marginBottom: "6px" }}>
                   <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)", margin: 0 }}>AI &amp; Business Automation</h3>
-                  <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>2025 &ndash; 2026</span>
+                  <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>Sept 2026</span>
                 </div>
-                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>Academic Rapido TechFloor &mdash; <em>Funded by the Accenture Foundation</em></p>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>
+                  Academy Rapido &mdash; <em>Ready for IT programme by Fondazione Italiana Accenture &amp; The Human Safety Net</em>
+                </p>
                 <span style={{ fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "9999px", background: "rgba(22,163,74,0.12)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.35)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
                   Completed
                 </span>
@@ -182,6 +185,11 @@ export default function AboutPage() {
                   </Link>{" "}
                   on the Projects page.
                 </p>
+                <CertificateLink
+                  href="/certificates/ai-business-automation.pdf"
+                  thumb="/certificates/ai-business-automation-thumb.jpg"
+                  alt="AI & Business Automation certificate of completion"
+                />
               </div>
 
               <div style={{ padding: "14px", background: "var(--bg-surface-soft)", borderRadius: "12px", border: "1px solid var(--border-subtle)" }}>
@@ -212,6 +220,11 @@ export default function AboutPage() {
                 <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginTop: "8px" }}>
                   Hands-on training in Next.js App Router architecture, server components, routing, data fetching, and full-stack deployment on Vercel.
                 </p>
+                <CertificateLink
+                  href="/certificates/nextjs-app-router-fundamentals.pdf"
+                  thumb="/certificates/nextjs-app-router-fundamentals-thumb.jpg"
+                  alt="Next.js App Router Fundamentals certificate of completion"
+                />
               </div>
             </div>
           </SectionCard>
@@ -240,5 +253,47 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+/* ─── Certificate link ──────────────────────────────────────────────── */
+function CertificateLink({ href, thumb, alt }: { href: string; thumb: string; alt: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover-project-card"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        marginTop: "12px",
+        padding: "8px",
+        borderRadius: "10px",
+        border: "1px solid var(--border-subtle)",
+        background: "var(--bg-surface)",
+        textDecoration: "none",
+        width: "fit-content",
+        maxWidth: "100%",
+      }}
+    >
+      <div
+        style={{
+          width: "56px",
+          height: "36px",
+          borderRadius: "6px",
+          overflow: "hidden",
+          flexShrink: 0,
+          border: "1px solid var(--border-subtle)",
+          position: "relative",
+        }}
+      >
+        <Image src={thumb} alt={alt} fill style={{ objectFit: "cover" }} sizes="56px" />
+      </div>
+      <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--accent)" }}>
+        View Certificate ↗
+      </span>
+    </a>
   );
 }
