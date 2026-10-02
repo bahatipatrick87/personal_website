@@ -161,19 +161,21 @@ function HeroSection() {
               marginBottom: "14px",
             }}
           >
-            My work covers{" "}
+            My work combines{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
-              machine learning, deep learning, big data, and data visualisation
+              data science, machine learning, deep learning, federated learning, big data, and software development
             </strong>
-            . I enjoy turning complex data into clear insights, building predictive models, and automating data
-            pipelines — and explaining it simply, whether you&apos;re technical or not. I&apos;ve also completed
-            practical training in{" "}
+            , spanning projects in real-time data processing, computer vision, and AI-powered automation. I enjoy
+            turning complex data into clear insights, building predictive models, and automating data pipelines —
+            and explaining it simply, whether you&apos;re technical or not. I&apos;ve also completed practical
+            training in{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI &amp; business automation</strong>{" "}
             (n8n, OpenAI, RAG pipelines) and{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
               modern SAP ABAP Cloud development
             </strong>{" "}
-            (SAP BTP, CDS, RAP, OData V4, Clean Core).
+            (SAP BTP, CDS, RAP, OData V4, Clean Core) — strengthening my interest in the intersection of
+            technology, data, enterprise systems, and business needs.
           </p>
           <p
             style={{
@@ -189,13 +191,15 @@ function HeroSection() {
             Flower — including a Byzantine-robustness test against a corrupted client update.
           </p>
           <p style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "var(--text-secondary)" }}>
-            I also have hands-on experience from Uganda, including business coaching for small enterprises
-            with{" "}
+            I also have hands-on experience from Uganda, including business coaching for micro and large
+            enterprises with{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AVSI Foundation</strong>, data
             collection with{" "}
             <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Save the Children</strong>, and
             education research with{" "}
-            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Windle International Uganda</strong>.
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>Windle International Uganda</strong> —
+            experience that sharpened my communication, problem-solving, and adaptability working with both
+            technical and non-technical stakeholders.
           </p>
         </div>
 

@@ -39,40 +39,56 @@ export default function AboutPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
           <SectionCard title="My Journey" eyebrow="Professional Story">
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              I am Bahati Patrick, a <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> currently
-              finishing my <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong>{" "}
-              at the Università degli Studi di Messina. I recently completed a research internship in{" "}
-              <strong style={{ color: "var(--accent)" }}>computational neuroscience</strong> at the Brian Lab,
-              where I worked on spiking neural networks — a type of brain-inspired machine learning model.
+              I am Bahati Patrick, a <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> with a
+              background in <strong style={{ color: "var(--accent)" }}>Business Information Technology</strong>,
+              currently finishing my{" "}
+              <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong> at the
+              Università degli Studi di Messina.
             </p>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              My work covers <strong style={{ color: "var(--accent)" }}>machine learning, deep learning, big data,
-              and data visualisation</strong>. I enjoy turning complex data into clear insights, building predictive
-              models, and automating data pipelines — and explaining it simply, whether you&apos;re technical or not.
-            </p>
-            <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              Most recently, I designed and built a{" "}
-              <strong style={{ color: "var(--accent)" }}>federated learning system</strong> comparing FedAvg and
-              FedMedian aggregation strategies — simulating 8 edge clients training on non-IID CIFAR-10 data with
-              PyTorch and Flower, and stress-testing both strategies against a simulated adversarial (Byzantine)
-              client update. See the full write-up on the{" "}
+              My experience combines{" "}
+              <strong style={{ color: "var(--accent)" }}>
+                Data Science, Machine Learning, Artificial Intelligence, Business Automation, Big Data, and software
+                development
+              </strong>
+              . I&apos;ve worked on projects involving machine learning and deep learning, federated learning,
+              real-time data processing, computer vision, AI-powered automation, and data analytics — and I enjoy
+              turning complex data into clear insights, building predictive models, and automating data pipelines —
+              explaining it simply, whether you&apos;re technical or not. See the{" "}
               <Link href="/projects" style={{ color: "var(--accent)", fontWeight: 600 }}>
                 Projects page
-              </Link>
-              .
+              </Link>{" "}
+              for the full write-ups, including a federated learning system comparing FedAvg and FedMedian
+              aggregation on non-IID CIFAR-10 data.
             </p>
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              I&apos;ve also completed practical training in{" "}
-              <strong style={{ color: "var(--accent)" }}>AI &amp; business automation</strong> (n8n, OpenAI, RAG
-              pipelines, multi-agent workflows) and{" "}
-              <strong style={{ color: "var(--accent)" }}>modern SAP ABAP Cloud development</strong> — including SAP
-              BTP, CDS Views, RAP, OData V4, and Clean Core principles — broadening my toolkit for enterprise and
-              business-process work alongside data science.
+              I&apos;ve also gained practical experience in{" "}
+              <strong style={{ color: "var(--accent)" }}>AI &amp; Business Automation</strong>, working with tools
+              such as n8n, RAG, AI agents, and multi-agent workflows to build solutions for business processes and
+              customer support. In addition, I&apos;ve completed practical training in{" "}
+              <strong style={{ color: "var(--accent)" }}>SAP ABAP Cloud</strong>, working with SAP BTP, CDS Views,
+              RAP, OData V4, and Clean Core principles — strengthening my interest in the intersection of
+              technology, data, enterprise systems, and business needs.
+            </p>
+            <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
+              Alongside my technical work, I have experience in business coaching for micro and large enterprises
+              with <strong style={{ color: "var(--accent)" }}>AVSI Foundation</strong>, data collection with{" "}
+              <strong style={{ color: "var(--accent)" }}>Save the Children</strong>, and education research
+              assistance with{" "}
+              <strong style={{ color: "var(--accent)" }}>Windle International Uganda</strong>. These experiences
+              have helped me develop communication, problem-solving, adaptability, teamwork, and the ability to
+              work with both technical and non-technical stakeholders.
+            </p>
+            <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
+              Most recently, I worked as a{" "}
+              <strong style={{ color: "var(--accent)" }}>Computational Neuroscience Research Intern</strong> at the
+              Brian Lab, exploring Spiking Neural Networks, Leaky Integrate-and-Fire (LIF) models, STDP, and
+              Reward-Modulated STDP (R-STDP) using Python and Brian2.
             </p>
             <p style={{ color: "var(--text-secondary)" }}>
-              I also have hands-on experience from Uganda, including business coaching for small enterprises with
-              AVSI Foundation, data collection with Save the Children, and education research with Windle
-              International Uganda.
+              I&apos;m particularly interested in opportunities where I can apply my technical skills to real-world
+              problems, continue learning, and contribute to innovative data, AI, automation, and enterprise
+              technology solutions.
             </p>
           </SectionCard>
 

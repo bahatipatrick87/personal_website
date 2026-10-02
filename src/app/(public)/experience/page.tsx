@@ -26,7 +26,7 @@ export default function ExperiencePage() {
       org: "AVSI Foundation – Nakivale, Isingiro District",
       period: "Oct 2023 – Oct 2024",
       highlights: [
-        "Mentored micro and small enterprises using data-informed growth strategies.",
+        "Mentored micro and large enterprises using data-informed growth strategies.",
         "Conducted market and performance analysis to support sustainable and scalable business models.",
         "Collaborated with private sector partners to strengthen job placement and employability outcomes.",
         "Collected, analyzed, and reported labor market data to support workforce development programs.",
