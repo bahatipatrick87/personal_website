@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       link: "https://github.com/bahatipatrick87/Comparing_Federated_aggregation_strategies",
       highlights: [
         "Built an end-to-end federated learning pipeline simulating 8 edge clients with non-IID data (Dirichlet-partitioned CIFAR-10), training a ~2M-parameter residual CNN across 15 communication rounds.",
-        "Implemented and benchmarked two server-side aggregation strategies — FedAvg (weighted mean) and FedMedian (coordinate-wise median) — isolating aggregation as the sole experimental variable.",
+        "Implemented and benchmarked two server-side aggregation strategies — FedAvg (weighted mean) and FedMedian (coordinate-wise median) — isolating aggregation as the sole experimental variable; FedAvg reached 82% test accuracy under clean conditions.",
         "Engineered a Byzantine-fault robustness experiment (a corrupted/scaled client update) that demonstrated FedAvg's accuracy collapsing to random-guess levels (10%) versus FedMedian holding 64%, surfacing a measurable robustness/accuracy trade-off between aggregation rules.",
         "Automated metrics collection and analysis (per-round accuracy, loss, aggregation/training time, CPU usage) with a reusable pandas/matplotlib reporting pipeline.",
       ]

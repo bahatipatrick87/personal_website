@@ -4,7 +4,7 @@ import { SectionCard } from "../page";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn more about Bahati Patrick's background, neuroscience research, certifications, and philosophy in data science and AI.",
+  description: "Learn more about Bahati Patrick's background, neuroscience research, AI automation and SAP ABAP certifications, and philosophy in data science and AI.",
 };
 
 export default function AboutPage() {
@@ -61,6 +61,14 @@ export default function AboutPage() {
               </Link>
               .
             </p>
+            <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
+              I&apos;ve also completed practical training in{" "}
+              <strong style={{ color: "var(--accent)" }}>AI &amp; business automation</strong> (n8n, OpenAI, RAG
+              pipelines, multi-agent workflows) and{" "}
+              <strong style={{ color: "var(--accent)" }}>modern SAP ABAP Cloud development</strong> — including SAP
+              BTP, CDS Views, RAP, OData V4, and Clean Core principles — broadening my toolkit for enterprise and
+              business-process work alongside data science.
+            </p>
             <p style={{ color: "var(--text-secondary)" }}>
               I also have hands-on experience from Uganda, including business coaching for small enterprises with
               AVSI Foundation, data collection with Save the Children, and education research with Windle
@@ -88,16 +96,18 @@ export default function AboutPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               {[
                 { label: "Programming Languages", items: ["Python", "SQL", "Java", "JavaScript", "HTML/CSS"] },
-                { label: "ML, Deep Learning & Neuroscience", items: ["Scikit-learn", "TensorFlow", "Keras", "PyTorch", "Brian2", "SNN", "STDP", "R-STDP"] },
+                { label: "SAP Development", items: ["SAP ABAP Cloud", "SAP BTP", "CDS Views", "RAP", "OData V4", "Clean Core", "Fiori concepts"] },
+                { label: "Machine Learning & Neuroscience", items: ["Scikit-learn", "TensorFlow", "Keras", "PyTorch", "Brian2", "SNN", "STDP", "R-STDP"] },
                 { label: "Federated Learning", items: ["Flower (flwr)", "Client-server simulation", "Non-IID partitioning (Dirichlet)", "FedAvg", "FedMedian", "Byzantine fault tolerance"] },
-                { label: "Data Science & Computing", items: ["NumPy", "Pandas", "SciPy", "Matplotlib", "Seaborn", "Feature Engineering"] },
+                { label: "Scientific Computing", items: ["NumPy", "Pandas", "SciPy", "Simulation Modeling", "Feature Engineering"] },
                 { label: "Big Data & Engineering", items: ["PySpark", "Spark SQL", "Apache Kafka", "Hadoop (HDFS)", "MapReduce", "HBase", "Hive"] },
                 { label: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Oracle"] },
-                { label: "Visualisation & BI", items: ["Power BI", "Tableau", "Streamlit", "Plotly", "Excel"] },
-                { label: "Computer Vision & NLP", items: ["OpenCV", "CNNs for Image Classification"] },
+                { label: "Data Visualization", items: ["Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI", "Tableau", "Excel"] },
+                { label: "Computer Vision", items: ["OpenCV", "CNNs for Image Classification"] },
+                { label: "AI & Automation", items: ["n8n", "OpenAI", "Gemini", "RAG", "AI Agents", "Multi-Agent Workflows", "Prompt Engineering", "REST APIs"] },
                 { label: "Web & Backend", items: ["React", "Angular", "Node.js", "Next.js", "Spring Boot", "ASP.NET Core", "Django"] },
                 { label: "DevOps & Tools", items: ["Docker", "Docker Compose", "Kubernetes", "Git", "GitHub"] },
-                { label: "Practices", items: ["Experiment design", "Reproducible ML pipelines", "Performance/timing profiling", "Technical documentation"] },
+                { label: "Research Methods", items: ["Data Preprocessing", "Statistical Analysis", "Academic Writing", "Experimental Design"] },
               ].map(group => (
                 <div key={group.label}>
                   <h4 style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--text-main)", marginBottom: "8px" }}>
@@ -155,6 +165,25 @@ export default function AboutPage() {
                     AI Customer Support Automation Platform and Multi-Agent Marketing Campaign Generator
                   </Link>{" "}
                   on the Projects page.
+                </p>
+              </div>
+
+              <div style={{ padding: "14px", background: "var(--bg-surface-soft)", borderRadius: "12px", border: "1px solid var(--border-subtle)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px", marginBottom: "6px" }}>
+                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)", margin: 0 }}>SAP ABAP Cloud Development</h3>
+                  <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>2026</span>
+                </div>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>Training &amp; Practical Projects</p>
+                <span style={{ fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "9999px", background: "rgba(22,163,74,0.12)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.35)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                  Completed
+                </span>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginTop: "8px" }}>
+                  Practical training in modern SAP development using ABAP Cloud, SAP BTP, CDS Views, RAP, and OData
+                  V4. Built sample ABAP applications with modern, object-oriented syntax; created semantic CDS Views
+                  for business data modeling; and built a RAP Business Object with data modeling, behavior
+                  definition, and service exposure. Configured service bindings to expose RAP applications through
+                  OData V4 and applied Clean Core principles for cloud-ready SAP extensions, with practical exposure
+                  to the SAP BTP ABAP Environment (Steampunk) and the backend concepts supporting SAP Fiori apps.
                 </p>
               </div>
 

@@ -20,15 +20,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
   title: {
-    default: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
+    default: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
     template: "%s | Bahati Patrick",
   },
   description:
-    "Personal website of Bahati Patrick — Data Scientist specializing in machine learning, big data engineering, and computational neuroscience research.",
+    "Personal website of Bahati Patrick — Data Scientist specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and computational neuroscience research.",
   openGraph: {
-    title: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
+    title: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
     description:
-      "Data Scientist with hands-on experience in machine learning, deep learning, and big data engineering, turning complex datasets into actionable insights and predictive models.",
+      "Data Scientist with hands-on experience in machine learning, deep learning, big data engineering, AI business automation, and SAP ABAP Cloud development, turning complex datasets into actionable insights and predictive models.",
     type: "website",
     locale: "en_US",
     siteName: "Bahati Patrick",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bahati Patrick | Data Scientist, ML & Big Data Engineer",
+    title: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
     description:
       "Portfolio and academic profile of Bahati Patrick, Data Scientist.",
   },
@@ -80,7 +80,10 @@ export default function RootLayout({
     knowsAbout: [
       "Data Science",
       "Machine Learning",
+      "Federated Learning",
       "Big Data Engineering",
+      "AI Business Automation",
+      "SAP ABAP Cloud Development",
       "Computational Neuroscience",
     ],
     sameAs: [SOCIAL.linkedin, SOCIAL.github],

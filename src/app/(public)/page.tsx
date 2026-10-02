@@ -6,10 +6,10 @@ import { SocialContactList } from "@/components/social-contact-list";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Bahati Patrick | Data Scientist",
+    absolute: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
   },
   description:
-    "Personal website of Bahati Patrick — a Data Scientist with research experience in computational neuroscience, specializing in machine learning, big data engineering, and data-driven problem solving.",
+    "Personal website of Bahati Patrick — a Data Scientist with research experience in computational neuroscience, specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and data-driven problem solving.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";
@@ -129,7 +129,7 @@ function HeroSection() {
                 letterSpacing: "0.01em",
               }}
             >
-              Data Scientist · MSc Data Science Candidate
+              Data Scientist · AI &amp; Automation · SAP ABAP
             </p>
           </div>
         </div>
@@ -166,7 +166,14 @@ function HeroSection() {
               machine learning, deep learning, big data, and data visualisation
             </strong>
             . I enjoy turning complex data into clear insights, building predictive models, and automating data
-            pipelines — and explaining it simply, whether you&apos;re technical or not.
+            pipelines — and explaining it simply, whether you&apos;re technical or not. I&apos;ve also completed
+            practical training in{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>AI &amp; business automation</strong>{" "}
+            (n8n, OpenAI, RAG pipelines) and{" "}
+            <strong style={{ color: "var(--text-main)", fontWeight: 600 }}>
+              modern SAP ABAP Cloud development
+            </strong>{" "}
+            (SAP BTP, CDS, RAP, OData V4, Clean Core).
           </p>
           <p
             style={{
@@ -445,7 +452,7 @@ function FeaturedProjects() {
       tech: "PyTorch · Flower (flwr) · Non-IID CIFAR-10",
       tag: "Federated Learning",
       tagColor: "#7c3aed",
-      desc: "Simulated 8 edge clients training a residual CNN on non-IID (Dirichlet-partitioned) CIFAR-10, benchmarking FedAvg vs. FedMedian. A Byzantine robustness test showed FedMedian held 64% accuracy under a corrupted client update versus FedAvg's collapse to 10%.",
+      desc: "Simulated 8 edge clients training a residual CNN on non-IID (Dirichlet-partitioned) CIFAR-10, benchmarking FedAvg vs. FedMedian — FedAvg reached 82% clean-setting accuracy. A Byzantine robustness test showed FedMedian held 64% accuracy under a corrupted client update versus FedAvg's collapse to 10%.",
     },
     {
       name: "Reward-Modulated Spiking Neural Network (R-STDP)",
@@ -690,7 +697,9 @@ function QuickInfo() {
 function TopSkills() {
   const groups = [
     { label: "ML / AI", items: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"] },
+    { label: "SAP Development", items: ["SAP ABAP Cloud", "SAP BTP", "CDS Views", "RAP", "OData V4"] },
     { label: "Federated Learning", items: ["Flower (flwr)", "FedAvg", "FedMedian", "Byzantine robustness"] },
+    { label: "AI Automation", items: ["n8n", "OpenAI", "RAG", "AI Agents"] },
     { label: "Neuroscience", items: ["Brian2", "SNN", "STDP", "R-STDP"] },
     { label: "Big Data", items: ["PySpark", "Kafka", "Hadoop", "Docker"] },
     { label: "Visualization", items: ["Power BI", "Streamlit", "Plotly"] },
