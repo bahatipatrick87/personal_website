@@ -114,7 +114,7 @@ export default function AboutPage() {
               {[
                 { label: "Programming Languages", items: ["Python", "SQL", "Java", "JavaScript", "HTML/CSS"] },
                 { label: "SAP Development", items: ["SAP ABAP Cloud", "SAP BTP", "CDS Views", "RAP", "OData V4", "Clean Core", "Fiori concepts"] },
-                { label: "Machine Learning & Neuroscience", items: ["Scikit-learn", "TensorFlow", "Keras", "PyTorch", "Brian2", "SNN", "STDP", "R-STDP"] },
+                { label: "Machine Learning & Neuroscience", items: ["Supervised Learning (Regression & Classification)", "Scikit-learn", "TensorFlow", "Keras", "PyTorch", "Brian2", "SNN", "STDP", "R-STDP"] },
                 { label: "Federated Learning", items: ["Flower (flwr)", "Client-server simulation", "Non-IID partitioning (Dirichlet)", "FedAvg", "FedMedian", "Byzantine fault tolerance"] },
                 { label: "Scientific Computing", items: ["NumPy", "Pandas", "SciPy", "Simulation Modeling", "Feature Engineering"] },
                 { label: "Big Data & Engineering", items: ["PySpark", "Spark SQL", "Apache Kafka", "Hadoop (HDFS)", "MapReduce", "HBase", "Hive"] },
@@ -165,6 +165,36 @@ export default function AboutPage() {
 
           <SectionCard title="Certifications & Training" eyebrow="Professional Development">
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+              <div style={{ padding: "14px", background: "var(--bg-surface-soft)", borderRadius: "12px", border: "1px solid var(--border-subtle)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px", marginBottom: "6px" }}>
+                  <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)", margin: 0 }}>Supervised Machine Learning: Regression and Classification</h3>
+                  <span style={{ fontSize: "0.70rem", fontWeight: 600, color: "var(--accent)", whiteSpace: "nowrap" }}>Oct 2026</span>
+                </div>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px 0" }}>
+                  DeepLearning.AI &amp; Stanford Online, taught by <em>Andrew Ng</em> &mdash; via Coursera
+                </p>
+                <span style={{ fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "9999px", background: "rgba(22,163,74,0.12)", color: "#16a34a", border: "1px solid rgba(22,163,74,0.35)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+                  Completed
+                </span>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginTop: "8px" }}>
+                  Covered core supervised learning methods — linear and logistic regression, gradient descent,
+                  regularisation, and classification — as the first course in the Machine Learning Specialization.{" "}
+                  <a
+                    href="https://coursera.org/verify/Q2VYSO6M7Q6N"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--accent)", fontWeight: 600 }}
+                  >
+                    Verify on Coursera ↗
+                  </a>
+                </p>
+                <CertificateLink
+                  href="/certificates/supervised-ml-regression-classification.pdf"
+                  thumb="/certificates/supervised-ml-regression-classification-thumb.jpg"
+                  alt="Supervised Machine Learning: Regression and Classification certificate of completion"
+                />
+              </div>
+
               <div style={{ padding: "14px", background: "var(--bg-surface-soft)", borderRadius: "12px", border: "1px solid var(--border-subtle)" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "8px", marginBottom: "6px" }}>
                   <h3 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-main)", margin: 0 }}>AI &amp; Business Automation</h3>
