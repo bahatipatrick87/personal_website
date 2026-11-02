@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Bahati Patrick for freelance, full-time roles, or exciting collaboration opportunities.",
+  description: "Get in touch with Patrick Bahati for freelance, full-time roles, or exciting collaboration opportunities.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";

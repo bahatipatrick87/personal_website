@@ -6,10 +6,10 @@ import { SocialContactList } from "@/components/social-contact-list";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
+    absolute: "Patrick Bahati | Data Scientist, AI Automation & SAP ABAP",
   },
   description:
-    "Personal website of Bahati Patrick — a Data Scientist with research experience in computational neuroscience, specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and data-driven problem solving.",
+    "Personal website of Patrick Bahati — a Data Scientist with research experience in computational neuroscience, specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and data-driven problem solving.",
 };
 
 const EMAIL = "bahatipatrick87@gmail.com";
@@ -94,7 +94,7 @@ function HeroSection() {
               <div style={{ borderRadius: "22px", overflow: "hidden", width: "100%", height: "100%" }}>
                 <Image
                   src="/patrick-bahati.png"
-                  alt="Bahati Patrick"
+                  alt="Patrick Bahati"
                   width={110}
                   height={110}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -118,8 +118,8 @@ function HeroSection() {
                 color: "var(--text-main)",
               }}
             >
-              <span className="gradient-text">Bahati</span>{" "}
-              <span style={{ color: "var(--text-main)" }}>Patrick</span>
+              <span className="gradient-text">Patrick</span>{" "}
+              <span style={{ color: "var(--text-main)" }}>Bahati</span>
             </h1>
             <p
               style={{
@@ -223,8 +223,8 @@ function HeroSection() {
             ✉ Email Me
           </Link>
           <a
-            href="/Bahati-Patrick-CV.pdf"
-            download="Bahati-Patrick-CV.pdf"
+            href="/Patrick-Bahati-CV.pdf"
+            download="Patrick-Bahati-CV.pdf"
             className="hover-btn-secondary"
             style={{
               display: "inline-flex", alignItems: "center", gap: "7px",
@@ -662,7 +662,7 @@ function QuickEducation() {
 function QuickInfo() {
   const rows = [
     { label: "Location", value: "Messina, Sicily, Italy" },
-    { label: "Nationality", value: "Ugandan" },
+    { label: "Nationality", value: "Rwandan" },
     { label: "Status", value: "Open to opportunities" },
     { label: "Studies", value: "MSc Data Science (2024–2026)" },
     { label: "University", value: "UniME, Italy" },

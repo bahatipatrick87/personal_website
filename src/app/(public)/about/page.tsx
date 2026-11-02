@@ -5,7 +5,7 @@ import { SectionCard } from "../page";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn more about Bahati Patrick's background, neuroscience research, AI automation and SAP ABAP certifications, and philosophy in data science and AI.",
+  description: "Learn more about Patrick Bahati's background, neuroscience research, AI automation and SAP ABAP certifications, and philosophy in data science and AI.",
 };
 
 export default function AboutPage() {
@@ -40,7 +40,7 @@ export default function AboutPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
           <SectionCard title="My Journey" eyebrow="Professional Story">
             <p style={{ marginBottom: "16px", color: "var(--text-secondary)" }}>
-              I am Bahati Patrick, a <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> with a
+              I am Patrick Bahati, a <strong style={{ color: "var(--accent)" }}>Data Scientist</strong> with a
               background in <strong style={{ color: "var(--accent)" }}>Business Information Technology</strong>,
               currently finishing my{" "}
               <strong style={{ color: "var(--accent)" }}>Master&apos;s Degree in Data Science</strong> at the

@@ -20,18 +20,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
   title: {
-    default: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
-    template: "%s | Bahati Patrick",
+    default: "Patrick Bahati | Data Scientist, AI Automation & SAP ABAP",
+    template: "%s | Patrick Bahati",
   },
   description:
-    "Personal website of Bahati Patrick — Data Scientist specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and computational neuroscience research.",
+    "Personal website of Patrick Bahati — Data Scientist specializing in machine learning, big data engineering, AI business automation, SAP ABAP Cloud development, and computational neuroscience research.",
   openGraph: {
-    title: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
+    title: "Patrick Bahati | Data Scientist, AI Automation & SAP ABAP",
     description:
       "Data Scientist with hands-on experience in machine learning, deep learning, big data engineering, AI business automation, and SAP ABAP Cloud development, turning complex datasets into actionable insights and predictive models.",
     type: "website",
     locale: "en_US",
-    siteName: "Bahati Patrick",
+    siteName: "Patrick Bahati",
   },
   robots: {
     index: true,
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bahati Patrick | Data Scientist, AI Automation & SAP ABAP",
+    title: "Patrick Bahati | Data Scientist, AI Automation & SAP ABAP",
     description:
-      "Portfolio and academic profile of Bahati Patrick, Data Scientist.",
+      "Portfolio and academic profile of Patrick Bahati, Data Scientist.",
   },
 };
 
@@ -63,7 +63,7 @@ export default function RootLayout({
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Bahati Patrick",
+    name: "Patrick Bahati",
     url: siteUrl,
     image: `${siteUrl}/patrick-bahati.png`,
     jobTitle: "Data Scientist",
@@ -112,7 +112,7 @@ export default function RootLayout({
             <footer className="border-t border-[color:var(--border-subtle)] bg-[color:var(--bg-surface-soft)]/95">
               <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 text-xs text-[color:var(--text-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
                 <p className="order-2 text-center sm:order-1 sm:text-left">
-                  © {new Date().getFullYear()} Bahati Patrick. All rights
+                  © {new Date().getFullYear()} Patrick Bahati. All rights
                   reserved.
                 </p>
                 <div className="order-1 flex justify-center sm:order-2 sm:justify-end">

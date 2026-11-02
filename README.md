@@ -1,4 +1,4 @@
-# Bahati Patrick — Portfolio
+# Patrick Bahati — Portfolio
 
 Personal portfolio and profile site built with [Next.js](https://nextjs.org) (App Router) and
 [Tailwind CSS](https://tailwindcss.com). Contact-form messages are stored permanently in a

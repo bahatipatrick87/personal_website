@@ -3,7 +3,7 @@ import { SectionCard } from "../page";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Bahati Patrick's complete professional journey in computational neuroscience, data science, business coaching, and research.",
+  description: "Patrick Bahati's complete professional journey in computational neuroscience, data science, business coaching, and research.",
 };
 
 export default function ExperiencePage() {
